@@ -1,9 +1,19 @@
-@mixin respond($width) {
+@mixin respond-down($width) {
     @media only screen and (max-width: $width) { @content }
 };
 @mixin respond-up($width) {
     @media only screen and (min-width: $width) {@content}
 };
+
+$breakpoints: (
+    'desktop': 1024px,
+    'ipad': 990px,
+    'mobile': 660px
+);
+@mixin respond($breakpoint) {
+    @media only screen and (max-width: map-get($map: $breakpoints, $breakpoint)){@content}
+};
+
 
 @mixin clear {
     &::after {
@@ -34,6 +44,7 @@
     }
 };
 
+
 @mixin grid-sys($col-nm,$col-gutter:3,$width:100) {
     margin-right: percentage($col-gutter / 100);
     width: percentage( (($width - $col-gutter * ($col-nm - 1)) / $col-nm) / $width);
@@ -42,3 +53,4 @@
 
 @mixin table-sys($col-nm,$width) {
 }
+
