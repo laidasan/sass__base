@@ -5,11 +5,7 @@
     @media only screen and (min-width: $width) {@content}
 };
 
-$breakpoints: (
-    'desktop': 1024px,
-    'ipad': 990px,
-    'mobile': 660px
-);
+
 @mixin respond($breakpoint) {
     @media only screen and (max-width: map-get($map: $breakpoints, $breakpoint)){@content}
 };
@@ -32,15 +28,16 @@ $breakpoints: (
     }
 };
 
-@mixin btn-base($shadow-border:true,$f-size:1.5rem,$p-tb:1.2rem,$p-rl:1.8rem) {
+@mixin btn-base($shadow-border:true,$b-radius-level:0,$f-size-level:1,$p-tb:1.2rem,$p-rl:1.8rem) {
     &:link,
     &:visited {
         display: inline-block;
         text-decoration: none;
         color: #000;
-        font-size: $f-size;
+        font-size: nth($font-size,$f-size-level);
         padding: $p-tb,$p-rl;
         @if $shadow-border {box-shadow: 0 0 0 1px #000;}
+        @if $b-radius-level > 0 {border-radius: nth($border-radius , $b-radius-level);}
     }
 };
 
@@ -54,3 +51,15 @@ $breakpoints: (
 @mixin table-sys($col-nm,$width) {
 }
 
+@mixin  font($f-size-level:1,$f-weight-level:1,$lh:0px) {
+    font-size: nth($font-size , $f-size-level);
+    font-weight: ntn($font-weight,$f-weight-level);
+    line-height: nth($font-size , $f-size-level) + $lh;
+}
+
+
+// 比較大的 mixin 
+@mixin  big-mixin {
+    @extend %btn-base;
+    @include font($level);
+}
