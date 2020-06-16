@@ -7,7 +7,7 @@
 
 
 @mixin respond($breakpoint) {
-    @media only screen and (max-width: map-get($map: $breakpoints, $breakpoint)){@content}
+    @media only screen and (max-width: map-get($breakpoints, $breakpoint)){@content}
 };
 
 
@@ -26,6 +26,12 @@
     &:visited {
         @content
     }
+};
+
+@mixin absolute-fill-ct {
+    position: absolute; 
+    top: 0; bottom: 0; right: 0; left: 0;
+    margin: auto;
 };
 
 @mixin btn-base($shadow-border:true,$b-radius-level:0,$f-size-level:1,$p-tb:1.2rem,$p-rl:1.8rem) {
@@ -48,18 +54,19 @@
     &:nth-child(#{$col-nm}n) { margin-right: 0; }
 };
 
-@mixin table-sys($col-nm,$width) {
-}
+// @mixin table-sys($col-nm,$width) {
+// };
 
-@mixin  font($f-size-level:1,$f-weight-level:1,$lh:0px) {
+@mixin  font($f-size-level:2,$lh:0px,$f-weight-level:1) {
     font-size: nth($font-size , $f-size-level);
-    font-weight: ntn($font-weight,$f-weight-level);
+    font-weight: nth($font-weight,$f-weight-level);
     line-height: nth($font-size , $f-size-level) + $lh;
 }
 
 
+
 // 比較大的 mixin 
-@mixin  big-mixin {
-    @extend %btn-base;
-    @include font($level);
-}
+// @mixin  big-mixin {
+//     @extend %btn-base;
+//     @include font($level);
+// }
