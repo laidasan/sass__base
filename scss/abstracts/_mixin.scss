@@ -63,7 +63,7 @@
     &:nth-child(#{$col-nm}n) { margin-right: 0; }
 };
 
-@mixin grid-sys-test($col-nm,$mode:between,$col-gutter:20px) {
+@mixin grid-sys-test($col-nm,$col-gutter:20px,$mode:between) {
     @if $mode == between {
         margin-right: $col-gutter;
         width: calc((100% - #{($col-nm - 1)} * #{$gutter}) / #{$col-nm});
@@ -82,6 +82,7 @@
 
 
 
+
 // 比較大的 mixin 
 // @mixin  big-mixin {
 //     @extend %btn-base;
@@ -92,9 +93,9 @@
 
 
 
-$columns: 10;
-$container: 1000px;
-$gutter: 20px;
+// $columns: 10;
+// $container: 1000px;
+// $gutter: 20px;
 // $breakpoints:(
 //     md:768px,
 //     sm:480px

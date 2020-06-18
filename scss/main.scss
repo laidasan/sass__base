@@ -1,5 +1,6 @@
 @import "abstracts/mixin";
 @import "abstracts/variable";
+@import "abstracts/function";
 
 
 @import "base/base";
@@ -8,4 +9,5 @@
 
 
 @import "component/btn";
-@import "component/test";
+@import "component/gridsys";
+// @import "component/test";
