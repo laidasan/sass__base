@@ -1,0 +1,23 @@
+{
+  "name": "104-layout-practive",
+  "version": "1.0.0",
+  "description": "Hi I am Samura chiu",
+  "main": "index.js",
+  "scripts": {
+    "test:css": "node-sass scss/main.scss style/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laidasan/104mac-layout-practice.git"
+  },
+  "author": "samura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laidasan/104mac-layout-practice/issues"
+  },
+  "homepage": "https://github.com/laidasan/104mac-layout-practice#readme",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1"
+  }
+}
