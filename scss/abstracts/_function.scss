@@ -7,7 +7,7 @@
 @for $col-nm from 1 through $columns {
     @if $columns % $col-nm == 0 {
         .col-#{$columns / $col-nm} {
-            @include grid-sys-test($col-nm,$gutter);
+            @include grid-sys($col-nm,$gutter);
             float: left;
 
             // just show
@@ -15,5 +15,24 @@
             min-height: 30px;
             margin-bottom: 1.2rem;
         }
-    };
-};
+    }
+}
+
+
+@each $key,$value in $breakpoints {
+    @include respond-down($value) {
+        @for $col-nm from 1 through $columns {
+            @if $columns % $col-nm == 0 {
+                .#{$key}\:col-#{$columns / $col-nm} {
+                    @include grid-sys($col-nm,$gutter);
+                    float: left;
+        
+                    // just show
+                    background-color: rgba(blue,.6);
+                    min-height: 30px;
+                    margin-bottom: 1.2rem;
+                }
+            }
+        }
+    }
+}

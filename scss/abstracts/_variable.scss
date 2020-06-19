@@ -1,10 +1,9 @@
 // base
 $breakpoints: (
-    'large-desktop': 1440px,
-    'desktop': 1024px,
-    'ipad': 990px,
-    'tablet': 768px,
-    'phone': 480px
+    'xl' : 1440px,
+    'lg' : 960px,
+    'md' : 768px,
+    'sm' : 480px
 );
 
 // grid-sys
@@ -17,44 +16,8 @@ $font-weight: 400 500 700 900;
 $m: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
 $p: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
 
-// $mb: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem;
-// $ml: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem;
-// $mt: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem;
-// $mr: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem;
-
-
 $border-radius: 3px 6px 9px 12px;
 $border-radius-circle: 50%;
 
-
 $color-balck: #000;
 $color-white: #fff;
-
-// 變數管理
-// $flex-map: (
-//     $font-size : 1.5rem 1.8rem 2.1rem,
-// );
-
-// $float-map: (
-//     $font-size : 1.5rem 1.8rem 2.1rem,
-// );
-
-// $table-map: (
-//     $font-size : 1.5rem 1.8rem 2.1rem,
-// );
-
-
-
-// page
-// wang
-
-$color-primary: #c9032e;
-$color-primary-sub: #ffb25a;
-$color-secondary: #fafafa;
-
-$color-text: #dadada;
-
-$padding: 6.9rem 0;
-
-// 18px 21px 40px 
-//  3    4    9

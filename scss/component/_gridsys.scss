@@ -5,11 +5,19 @@
 }
 
 .container {
-    width: 980px;
+    max-width: 980px;
     padding: 0 30px;
     margin-left: auto;
     margin-right: auto;
     background: rgba(blue,.3);
     min-height: 120px;
     @include clear;
+}
+
+
+.test-item {
+    @include grid-sys(3,3%);
+    float: left;
+    min-height: 120px;
+    background-color: #00aaaa;
 }

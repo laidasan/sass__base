@@ -58,6 +58,230 @@
   .col-1:nth-child(12n) {
     margin-right: 0; }
 
+@media only screen and (max-width: 1440px) {
+  .xl\:col-12 {
+    margin-right: 20px;
+    width: calc((100% - 0 * 20px) / 1);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .xl\:col-12:nth-child(1n) {
+      margin-right: 0; }
+  .xl\:col-6 {
+    margin-right: 20px;
+    width: calc((100% - 1 * 20px) / 2);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .xl\:col-6:nth-child(2n) {
+      margin-right: 0; }
+  .xl\:col-4 {
+    margin-right: 20px;
+    width: calc((100% - 2 * 20px) / 3);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .xl\:col-4:nth-child(3n) {
+      margin-right: 0; }
+  .xl\:col-3 {
+    margin-right: 20px;
+    width: calc((100% - 3 * 20px) / 4);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .xl\:col-3:nth-child(4n) {
+      margin-right: 0; }
+  .xl\:col-2 {
+    margin-right: 20px;
+    width: calc((100% - 5 * 20px) / 6);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .xl\:col-2:nth-child(6n) {
+      margin-right: 0; }
+  .xl\:col-1 {
+    margin-right: 20px;
+    width: calc((100% - 11 * 20px) / 12);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .xl\:col-1:nth-child(12n) {
+      margin-right: 0; } }
+
+@media only screen and (max-width: 960px) {
+  .lg\:col-12 {
+    margin-right: 20px;
+    width: calc((100% - 0 * 20px) / 1);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .lg\:col-12:nth-child(1n) {
+      margin-right: 0; }
+  .lg\:col-6 {
+    margin-right: 20px;
+    width: calc((100% - 1 * 20px) / 2);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .lg\:col-6:nth-child(2n) {
+      margin-right: 0; }
+  .lg\:col-4 {
+    margin-right: 20px;
+    width: calc((100% - 2 * 20px) / 3);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .lg\:col-4:nth-child(3n) {
+      margin-right: 0; }
+  .lg\:col-3 {
+    margin-right: 20px;
+    width: calc((100% - 3 * 20px) / 4);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .lg\:col-3:nth-child(4n) {
+      margin-right: 0; }
+  .lg\:col-2 {
+    margin-right: 20px;
+    width: calc((100% - 5 * 20px) / 6);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .lg\:col-2:nth-child(6n) {
+      margin-right: 0; }
+  .lg\:col-1 {
+    margin-right: 20px;
+    width: calc((100% - 11 * 20px) / 12);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .lg\:col-1:nth-child(12n) {
+      margin-right: 0; } }
+
+@media only screen and (max-width: 768px) {
+  .md\:col-12 {
+    margin-right: 20px;
+    width: calc((100% - 0 * 20px) / 1);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .md\:col-12:nth-child(1n) {
+      margin-right: 0; }
+  .md\:col-6 {
+    margin-right: 20px;
+    width: calc((100% - 1 * 20px) / 2);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .md\:col-6:nth-child(2n) {
+      margin-right: 0; }
+  .md\:col-4 {
+    margin-right: 20px;
+    width: calc((100% - 2 * 20px) / 3);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .md\:col-4:nth-child(3n) {
+      margin-right: 0; }
+  .md\:col-3 {
+    margin-right: 20px;
+    width: calc((100% - 3 * 20px) / 4);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .md\:col-3:nth-child(4n) {
+      margin-right: 0; }
+  .md\:col-2 {
+    margin-right: 20px;
+    width: calc((100% - 5 * 20px) / 6);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .md\:col-2:nth-child(6n) {
+      margin-right: 0; }
+  .md\:col-1 {
+    margin-right: 20px;
+    width: calc((100% - 11 * 20px) / 12);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .md\:col-1:nth-child(12n) {
+      margin-right: 0; } }
+
+@media only screen and (max-width: 480px) {
+  .sm\:col-12 {
+    margin-right: 20px;
+    width: calc((100% - 0 * 20px) / 1);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .sm\:col-12:nth-child(1n) {
+      margin-right: 0; }
+  .sm\:col-6 {
+    margin-right: 20px;
+    width: calc((100% - 1 * 20px) / 2);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .sm\:col-6:nth-child(2n) {
+      margin-right: 0; }
+  .sm\:col-4 {
+    margin-right: 20px;
+    width: calc((100% - 2 * 20px) / 3);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .sm\:col-4:nth-child(3n) {
+      margin-right: 0; }
+  .sm\:col-3 {
+    margin-right: 20px;
+    width: calc((100% - 3 * 20px) / 4);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .sm\:col-3:nth-child(4n) {
+      margin-right: 0; }
+  .sm\:col-2 {
+    margin-right: 20px;
+    width: calc((100% - 5 * 20px) / 6);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .sm\:col-2:nth-child(6n) {
+      margin-right: 0; }
+  .sm\:col-1 {
+    margin-right: 20px;
+    width: calc((100% - 11 * 20px) / 12);
+    float: left;
+    background-color: rgba(0, 0, 255, 0.6);
+    min-height: 30px;
+    margin-bottom: 1.2rem; }
+    .sm\:col-1:nth-child(12n) {
+      margin-right: 0; } }
+
 html {
   font-size: 62.5%; }
 
@@ -131,19 +355,3 @@ ol h2 {
   font-size: 1.2rem;
   padding: 1.2rem, 1.8rem;
   box-shadow: 0 0 0 1px #000; }
-
-.wrapper {
-  min-height: 300px;
-  box-shadow: 0 0 0 1px #cd0000; }
-
-.container {
-  width: 980px;
-  padding: 0 30px;
-  margin-left: auto;
-  margin-right: auto;
-  background: rgba(0, 0, 255, 0.3);
-  min-height: 120px; }
-  .container::after {
-    content: '';
-    display: block;
-    clear: both; }

@@ -1,0 +1,63 @@
+// margin % 數 grid-sys , 基礎版 , 只有兩邊對齊
+@mixin grid-sys($col-nm,$col-gutter:3,$width:100) {
+    margin-right: percentage($col-gutter / 100);
+    width: percentage( (($width - $col-gutter * ($col-nm - 1)) / $col-nm) / $width);
+    &:nth-child(#{$col-nm}n) { margin-right: 0; }
+};
+
+
+
+
+// 0619
+.wrapper {
+    min-height: 300px;
+    // background: #000;
+    box-shadow: 0 0 0 1px #cd0000;
+}
+
+.container {
+    width: 980px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(blue,.3);
+    min-height: 120px;
+    @include clear;
+}
+
+.col-10 {
+    // margin-right: 10px;
+    // margin-left: 10px;
+    min-height: 60px;
+    background: rgba(red,.6);
+}
+
+.col-1 {
+    float: left;
+    width: calc((100% - 20px * 10) / 10);
+    margin-right: 20px;
+    min-height: 30px;
+    background: #fff;
+
+    
+    &:nth-child(10n) {
+        margin-right: 0;
+        background: #cd0000;
+    }
+}
+
+.col-5 {
+    float: left;
+    width: calc(100% / (10 / 5) - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 10px;
+    background: #fff;
+}
+
+.test {
+    float: left;
+    min-height: 30px;
+    background: #000;
+    @include grid-sys-test(3,even,10px);
+}
