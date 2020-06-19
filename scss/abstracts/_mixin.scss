@@ -70,3 +70,11 @@
         &:first-child { margin-left: $col-gutter;}
     };
 }
+
+
+// animation
+
+// bounce
+@mixin bounce {
+    @extend %bounce;
+}
