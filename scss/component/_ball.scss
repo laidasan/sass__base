@@ -4,8 +4,4 @@
     margin: auto;
     border-radius: 50%;
     background-color: #aa4800;
-    
-    &.bounce {
-        @include bounce;
-    }
 }
