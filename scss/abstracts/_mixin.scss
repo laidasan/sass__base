@@ -67,7 +67,7 @@
     @if $mode == even {
         margin-right: $col-gutter;
         width: calc((100% - #{($col-nm + 1)} * #{$col-gutter}) / #{$col-nm});
-        &:first-child { margin-left: $col-gutter;}
+        &:nth-child(#{$col-nm}n + 1) { margin-left: $col-gutter;}
     };
 }
 
