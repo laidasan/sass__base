@@ -7,7 +7,7 @@
 @for $col-nm from 1 through $columns {
     @if $columns % $col-nm == 0 {
         .col-#{$columns / $col-nm} {
-            @include grid-sys($col-nm,$gutter);
+            @include grid-sys($col-nm,$gutter,around);
             float: left;
         }
     }
@@ -19,7 +19,7 @@
         @for $col-nm from 1 through $columns {
             @if $columns % $col-nm == 0 {
                 .#{$key}\:col-#{$columns / $col-nm} {
-                    @include grid-sys($col-nm,$gutter);
+                    @include grid-sys($col-nm,$gutter,around);
                     float: left;
                 }
             }
