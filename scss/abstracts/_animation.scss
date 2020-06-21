@@ -32,24 +32,31 @@ $bounce: (
 
 @keyframes bounce-shadow {
     0% {
-        transform: scale(1,1) 
+        transform: scale(1,1) rotateX(45deg);
+        opacity: .9;
     }
     10% {
-        transform: scale(1.1,.9) 
+        transform: scale(1.1,.9)  rotateX(45deg);
+        opacity: 1;
     }
     30% {
-        transform: scale(.7,1.2);
+        transform: scale(.7,1.2)  rotateX(45deg);
+        opacity: .6;
     }
     50% {
-        transform: scale(.95,1.05) 
+        transform: scale(.95,1.05)  rotateX(45deg);
+        opacity: .8;
     }
     57% {
-        transform: scale(.9,1); // 彈到地面反彈
+        transform: scale(.9,1)  rotateX(45deg); // 彈到地面反彈
+        opacity: .75;
     }
     64% {
-        transform: scale(1,1) 
+        transform: scale(1,1)  rotateX(45deg);
+        opacity: .9;
     }
     100% {
-        transform: scale(1,1) 
+        transform: scale(1,1)  rotateX(45deg);
+        opacity: .9;
     }
 }

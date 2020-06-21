@@ -8,6 +8,12 @@
     <title>Test Demo</title>
 </head>
 <style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .wrapper {
         max-width: 980px;
         margin: auto;
@@ -34,7 +40,11 @@
 
 </style>
 <body>
-    <div class="wrapper">
+    <div class="btn" style="position: relative;">
+        <div class="ball bounce"></div>
+        <span class="bounce-shadow"></span>
+    </div>
+    <!-- <div class="wrapper">
         <div class="container"> 
             <div class="item col-1"></div>
             <div class="item col-1"></div>
@@ -61,6 +71,6 @@
             <div class="item col-1"></div>
             <div class="item col-1"></div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

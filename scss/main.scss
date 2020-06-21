@@ -11,5 +11,13 @@
 
 
 @import "component/btn";
-// @import "component/bounce";
+@import "component/bounce";
+
+.ball {
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+    border-radius: 50%;
+    background: #aa6600;
+}
 
