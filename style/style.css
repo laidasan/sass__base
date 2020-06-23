@@ -265,6 +265,20 @@ ol h2 {
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1); }
 
+.ring {
+  position: relative;
+  z-index: 0;
+  box-shadow: inset 1px -1px 0 .15rem #00cdcd, inset 0 -1px 0 .3rem #cd00cd, 0 0 0 .2rem #fff, 0 0 0 .3rem #0000cd, 0 0 0 .5rem #fff, 0 0 0 .6rem #cd0000, 0 0 0 .8rem #fff, 0 0 0 .9rem #00cd00; }
+  .ring::after {
+    content: '';
+    position: absolute;
+    left: -.03rem;
+    right: -.03rem;
+    top: -.03rem;
+    bottom: -.03rem;
+    background: radial-gradient(circle at center, #cd0000, #cd0000 0.45rem, transparent 0.45rem) no-repeat left top/0.9rem 0.9rem, radial-gradient(circle at center, #cd0000, #cd0000 0.6rem, transparent 0.6rem) no-repeat right bottom/1.2rem 1.2rem;
+    transform: rotate(30deg); }
+
 .ball {
   width: 6rem;
   height: 6rem;
