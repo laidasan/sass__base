@@ -43,6 +43,13 @@
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1); }
 
+.ring::before, .ring__ball-1::after, .ring__ball-1::before, .ring__ball-2::after, .ring__ball-2::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
 .col-12 {
   margin: 0 10px;
   width: calc((100% - 1 * 20px) / 1);
@@ -267,17 +274,43 @@ ol h2 {
 
 .ring {
   position: relative;
-  z-index: 0;
-  box-shadow: inset 1px -1px 0 .15rem #00cdcd, inset 0 -1px 0 .3rem #cd00cd, 0 0 0 .2rem #fff, 0 0 0 .3rem #0000cd, 0 0 0 .5rem #fff, 0 0 0 .6rem #cd0000, 0 0 0 .8rem #fff, 0 0 0 .9rem #00cd00; }
-  .ring::after {
+  z-index: 0; }
+  .ring::before {
     content: '';
+    border-radius: 50%;
+    box-shadow: inset 1px -1px 0 .15rem #00cdcd, inset 0 -1px 0 .3rem #cd00cd, 0 0 0 .2rem #fff, 0 0 0 .3rem #0000cd, 0 0 0 .5rem #fff, 0 0 0 .6rem #cd0000, 0 0 0 .8rem #fff, 0 0 0 .9rem #00cd00; }
+  .ring__ball-1 {
     position: absolute;
     left: -.03rem;
     right: -.03rem;
     top: -.03rem;
-    bottom: -.03rem;
-    background: radial-gradient(circle at center, #cd0000, #cd0000 0.45rem, transparent 0.45rem) no-repeat left top/0.9rem 0.9rem, radial-gradient(circle at center, #cd0000, #cd0000 0.6rem, transparent 0.6rem) no-repeat right bottom/1.2rem 1.2rem;
-    transform: rotate(30deg); }
+    bottom: -.03rem; }
+    .ring__ball-1::after {
+      content: '';
+      background: radial-gradient(circle at center, #cd0000, #cd0000 0.6rem, transparent 0.6rem) no-repeat right bottom/1.2rem 1.2rem;
+      transform: rotate(-15deg); }
+    .ring__ball-1::before {
+      content: '';
+      background: radial-gradient(circle at center, #cd0000, #cd0000 0.45rem, transparent 0.45rem) no-repeat left top/0.9rem 0.9rem;
+      transform: rotate(15deg); }
+  .ring__ball-2 {
+    position: absolute;
+    left: -.5rem;
+    right: -.5rem;
+    top: -.5rem;
+    bottom: -.5rem;
+    z-index: -1; }
+    .ring__ball-2::after {
+      content: '';
+      background: radial-gradient(circle at center, #cd0000, #cd0000 0.7rem, transparent 0.7rem) no-repeat left top/1.4rem 1.4rem; }
+    .ring__ball-2::before {
+      content: '';
+      position: absolute;
+      left: -.21rem;
+      right: -.21rem;
+      top: -.21rem;
+      bottom: -.21rem;
+      background: radial-gradient(circle at center, #cd0000, #cd0000 0.9rem, transparent 0.9rem) no-repeat right bottom/2rem 2rem; }
 
 .ball {
   width: 6rem;

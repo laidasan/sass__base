@@ -79,6 +79,14 @@
     };
 }
 
+@mixin ab-fill($grow: 0) {
+    position: absolute;
+    left: 0 + $grow;
+    right: 0 + $grow;
+    top: 0 + $grow;
+    bottom: 0 + $grow;
+}
+
 
 // animation
 
