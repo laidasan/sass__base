@@ -1,24 +1,33 @@
 @import "abstracts/animation";
 @import "abstracts/extend";
-@import "abstracts/mixin";
 @import "abstracts/variable";
 @import "abstracts/function";
+@import "abstracts/mixin";
+@import "abstracts/loop";
 
 
 @import "base/base";
-@import "base/typography";
 @import "base/utilities";
 
-
+@import "component/ring";
+// @import "component/header";
+// @import "component/nav";
+// @import "component/banner";
+// @import "component/advantage";
+// @import "component/resume";
+// @import "component/table";
+// @import "component/form";
+// @import "component/health";
+// @import "component/resume-form";
+// @import "component/float-btn";
 @import "component/btn";
 @import "component/bounce";
-@import "component/ring";
 
-.ball {
-    width: 6rem;
-    height: 6rem;
-    margin: auto;
-    border-radius: 50%;
-    background: #aa6600;
-}
-
+// .link {
+//     @include link {
+//         // display: inline-block;
+//         text-decoration: none;
+//         @include font(3);
+//         @include under-line(1.2rem);
+//     }
+// }

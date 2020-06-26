@@ -3,26 +3,28 @@
     @return $font-size + 4px;
 };
 
-
-@for $col-nm from 1 through $columns {
-    @if $columns % $col-nm == 0 {
-        .col-#{$columns / $col-nm} {
-            @include grid-sys($col-nm,$gutter,around);
-            float: left;
-        }
-    }
+// menu modle
+@function get-mode($list,$mode) {
+    @return nth($list,$mode + 1);
 }
 
+// animation
 
-@each $key,$value in $breakpoints {
-    @include respond-down($value) {
-        @for $col-nm from 1 through $columns {
-            @if $columns % $col-nm == 0 {
-                .#{$key}\:col-#{$columns / $col-nm} {
-                    @include grid-sys($col-nm,$gutter,around);
-                    float: left;
-                }
-            }
-        }
-    }
+// ring
+@function ring-render($config) {
+    $ring-list: inset .3rem -.1rem 0 .2rem map-get(map-get($config,bk),bk-light),
+                inset -.2rem -.01rem 0 .3rem map-get(map-get($config,bk),bk-dark);
+    
+    @for $i from 0 through map-get(map-get($config,ring),count) - 1 {
+        $ring-list: append($ring-list , 0 0 0 map-get(map-get($config,ring),start) + $i * .3rem $color-white , comma);
+        $ring-list: append($ring-list , 0 0 0 map-get(map-get($config,ring),start) + ($i * .3rem) + map-get(map-get($config,ring),size) map-get(map-get($config,ring),color),comma);
+    };
+
+    @return $ring-list
+};
+
+@function ring-ball-render($ball-config,$size) {
+    @return radial-gradient(circle at center , 
+            map-get($ball-config,color) , map-get($ball-config,color) map-get($ball-config,#{$size}-size) / 2, transparent map-get($ball-config,#{$size}-size) / 2 )
+            no-repeat map-get($ball-config,#{$size}-position) / map-get($ball-config,#{$size}-size) map-get($ball-config,#{$size}-size);
 }

@@ -1,3 +1,4 @@
+// RwD
 @mixin respond-down($width) {
     @media only screen and (max-width: $width) { @content }
 };
@@ -7,10 +8,11 @@
 
 
 @mixin respond($breakpoint) {
-    @media only screen and (max-width: map-get($breakpoints, $breakpoint)){@content}
+    @media only screen and (min-width: map-get($breakpoints, $breakpoint)){@content}
 };
 
 
+// clear both
 @mixin clear {
     &::after {
         content: '';
@@ -20,7 +22,7 @@
 };
 
 
-
+// :link , :visited
 @mixin link {
     &:link,
     &:visited {
@@ -28,26 +30,44 @@
     }
 };
 
-@mixin absolute-fill-ct {
+// about position
+@mixin ab-fill-ct {
     position: absolute; 
     top: 0; bottom: 0; right: 0; left: 0;
     margin: auto;
 };
 
-@mixin btn-base($shadow-border:true,$b-radius-level:0,$f-size-level:1,$p-tb:1.2rem,$p-rl:1.8rem) {
+@mixin ab-fill($grow: 0) {
+    position: absolute;
+    left: 0 + $grow;
+    right: 0 + $grow;
+    top: 0 + $grow;
+    bottom: 0 + $grow;
+}
+
+@mixin position-all($grow) {
+    left: $grow;
+    right: $grow;
+    top: $grow;
+    bottom: $grow;
+}
+
+// btn
+@mixin btn-base($shadow-border:true,$b-radius-level:0,$f-size-level:2,$p-tb:1.2rem,$p-rl:1.8rem) {
     &:link,
     &:visited {
         display: inline-block;
         text-decoration: none;
         color: #000;
         font-size: nth($font-size,$f-size-level);
-        padding: $p-tb,$p-rl;
+        padding: $p-tb $p-rl;
         @if $shadow-border {box-shadow: 0 0 0 1px #000;}
         @if $b-radius-level > 0 {border-radius: nth($border-radius , $b-radius-level);}
     }
 };
 
-@mixin  font($f-size-level:2,$lh:0px,$f-weight-level:1) {
+// font-size and line-height
+@mixin  font($f-size-level:2,$lh:0,$f-weight-level:1) {
     font-size: nth($font-size , $f-size-level);
     font-weight: nth($font-weight,$f-weight-level);
     line-height: nth($font-size , $f-size-level) + $lh;
@@ -79,13 +99,60 @@
     };
 }
 
-@mixin ab-fill($grow: 0) {
-    position: absolute;
-    left: 0 + $grow;
-    right: 0 + $grow;
-    top: 0 + $grow;
-    bottom: 0 + $grow;
+// bk
+
+@mixin zebra-line($config) {
+    background: linear-gradient(90deg,map-get($config,bk-color-primary),map-get($config,bk-color-primary) 50%,map-get($config,bk-color-sub) 50%);
+    background-size: 100% / map-get($config,columns);
 }
+
+@mixin zebra($mode,$config:$zebra-config) {
+    @if get-mode($zebra-mode,$mode) == line {
+        @include zebra-line(map-get($config,line));
+    }
+}
+
+.zebra-line {
+    @include zebra(0);
+}
+
+// under line 
+@mixin under-line($move:0,$h:.12rem,$position:relative,$color:#000) {
+    position: $position;
+
+    &::before {
+        content: '';
+        position: absolute; bottom: -$move; left: 0; right: 0;
+        height: 0;
+        padding: $h / 2 0;
+        background: $color;
+    }
+}
+
+
+// menu
+@mixin menu-hum($h:.3rem) {
+    height: $h;
+    border-top: $h;
+    border-bottom: $h;
+    border-style: solid;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    background: #000;
+    background-clip: content-box;
+}
+
+@mixin menu($mode) {
+    @if get-mode($menu-mode,$mode) == hum {
+        @include menu-hum();
+    }
+}
+
+// .menu {
+//     @include menu(0);
+//     width: 3rem;
+// }
+
 
 
 // animation
@@ -93,4 +160,148 @@
 // bounce
 @mixin bounce {
     @extend %bounce;
+}
+
+// ring
+@mixin ring($custom:false,$config:$ring-config) {
+    background: map-get(map-get($config,bk),bk-normal);
+    &::before {
+        content: '';
+        @extend %ab-fill;
+        box-shadow: ring-render($config);
+        border-radius: 50%;
+    }
+
+    &__ball-1 {
+        @include ab-fill(.1rem);
+
+        &::before,&::after {
+            content: '';
+            @extend %ab-fill;
+        }
+
+        &::before {
+            background: ring-ball-render(  map-get(map-get($config,ball),ball-1), small  );
+            transform: rotate(map-get(map-get(map-get($config,ball),ball-1),small-rotate));
+            // transform: rotate(12deg);
+        }
+
+        &::after {
+            background: ring-ball-render( map-get(map-get($config,ball),ball-1), big );
+            transform: rotate(map-get(map-get(map-get($config,ball),ball-1),big-rotate));
+        }
+
+    }
+
+    &__ball-2 {
+        @include ab-fill(-.3rem);
+        z-index: -1;
+
+        &::before,&::after {
+            content: '';
+            @extend %ab-fill;
+        }
+
+        &::before {
+            background: ring-ball-render( map-get(map-get($config,ball),ball-2), small );
+        }
+
+        &::after {
+            @include ab-fill(-.21rem);
+            background: ring-ball-render( map-get(map-get($config,ball),ball-2), big );
+        }
+
+    }
+
+    @if $custom == false {
+        position: relative;
+        width: map-get(map-get($config,size),sm);
+        height: map-get(map-get($config,size),sm);
+        border-radius: 50%;
+
+        @include respond('sm') {
+            width: map-get(map-get($config,size),sm);
+            height: map-get(map-get($config,size),sm);
+        }
+        @include respond('md') {
+            width: map-get(map-get($config,size),md);
+            height: map-get(map-get($config,size),md);
+        }
+
+        @include respond('lg') {
+            &__ball-1 {
+                @include position-all(.3rem);
+            }
+
+            &__ball-2 {
+                @include position-all(0);
+            }
+        }
+
+        @include respond('xl') {
+            width: map-get(map-get($config,size),xl);
+            height: map-get(map-get($config,size),xl);
+
+            &__ball-1 {
+                @include position-all(.6rem);
+                
+                &::before {
+                    background: ring-ball-render(map-get($xl-ring-ball-config,ball-1),small);
+                }
+
+                &::after {
+                    background: ring-ball-render(map-get($xl-ring-ball-config,ball-1),big);
+                }
+                
+            }
+    
+            &__ball-2 {
+                @include position-all(.3rem);
+                
+                &::before {
+                    background: ring-ball-render(map-get($xl-ring-ball-config,ball-2),small);
+                }
+                &::after{
+                    background: ring-ball-render(map-get($xl-ring-ball-config,ball-2),big);
+                }
+        
+            }
+        }
+    }
+}
+
+// ring-animation
+@mixin ring-ball-an($mode) {
+    @extend %ring-ball-an-#{$mode};
+}
+
+// btn-ani
+@mixin btn-flyin($type) {
+    @if $type == 0 {
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            @include ab-fill();
+            left: -3rem; right: -3rem;
+            z-index: -1;
+            background: map-get(map-get($btn-ani-config,flyin),bk-color);
+            transform: translateX(-100%) skewX(-15deg);
+            transition: transform .3s ease-in-out;
+        }   
+        
+        &:hover {
+            color: map-get(map-get($btn-ani-config,flyin),color);
+        }
+       
+        &:hover::after {
+            transform: translateX(0) skewX(-15deg);
+        }
+    }
+}
+
+@mixin btn-ani($mode,$ani-type:0) {
+    @if get-mode($btn-ani,$mode) == flyin {
+        @include btn-flyin($ani-type);
+    }
 }

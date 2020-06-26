@@ -37,197 +37,192 @@
     transform: scale(1, 1) rotateX(45deg);
     opacity: .9; } }
 
+@keyframes ring-ball-an-1 {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
 .bounce {
   animation-name: bounce;
   animation-duration: 2.1s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1); }
 
-.ring::before, .ring__ball-1::after, .ring__ball-1::before, .ring__ball-2::after, .ring__ball-2::before {
+.ring::before, .ring__ball-1::before, .ring__ball-1::after, .ring__ball-2::before, .ring__ball-2::after {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0; }
 
+.ring__ball-1, .ring__ball-2 {
+  animation-name: ring-ball-an-1;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.zebra-line {
+  background: linear-gradient(90deg, #000, #000 50%, transparent 50%);
+  background-size: 50%; }
+
 .col-12 {
-  margin: 0 10px;
-  width: calc((100% - 1 * 20px) / 1);
-  float: left; }
+  margin: 0 1.2rem;
+  width: calc((100% - 1 * 2.4rem) / 1); }
 
 .col-6 {
-  margin: 0 10px;
-  width: calc((100% - 2 * 20px) / 2);
-  float: left; }
+  margin: 0 1.2rem;
+  width: calc((100% - 2 * 2.4rem) / 2); }
 
 .col-4 {
-  margin: 0 10px;
-  width: calc((100% - 3 * 20px) / 3);
-  float: left; }
+  margin: 0 1.2rem;
+  width: calc((100% - 3 * 2.4rem) / 3); }
 
 .col-3 {
-  margin: 0 10px;
-  width: calc((100% - 4 * 20px) / 4);
-  float: left; }
+  margin: 0 1.2rem;
+  width: calc((100% - 4 * 2.4rem) / 4); }
 
 .col-2 {
-  margin: 0 10px;
-  width: calc((100% - 6 * 20px) / 6);
-  float: left; }
+  margin: 0 1.2rem;
+  width: calc((100% - 6 * 2.4rem) / 6); }
 
 .col-1 {
-  margin: 0 10px;
-  width: calc((100% - 12 * 20px) / 12);
-  float: left; }
+  margin: 0 1.2rem;
+  width: calc((100% - 12 * 2.4rem) / 12); }
 
-@media only screen and (max-width: 1440px) {
-  .xl\:col-12 {
-    margin: 0 10px;
-    width: calc((100% - 1 * 20px) / 1);
-    float: left; }
-  .xl\:col-6 {
-    margin: 0 10px;
-    width: calc((100% - 2 * 20px) / 2);
-    float: left; }
-  .xl\:col-4 {
-    margin: 0 10px;
-    width: calc((100% - 3 * 20px) / 3);
-    float: left; }
-  .xl\:col-3 {
-    margin: 0 10px;
-    width: calc((100% - 4 * 20px) / 4);
-    float: left; }
-  .xl\:col-2 {
-    margin: 0 10px;
-    width: calc((100% - 6 * 20px) / 6);
-    float: left; }
-  .xl\:col-1 {
-    margin: 0 10px;
-    width: calc((100% - 12 * 20px) / 12);
-    float: left; } }
+@media only screen and (min-width: 320px) {
+  .xs\:col-12 {
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
+  .xs\:col-6 {
+    margin: 0 1.2rem;
+    width: calc((100% - 2 * 2.4rem) / 2); }
+  .xs\:col-4 {
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
+  .xs\:col-3 {
+    margin: 0 1.2rem;
+    width: calc((100% - 4 * 2.4rem) / 4); }
+  .xs\:col-2 {
+    margin: 0 1.2rem;
+    width: calc((100% - 6 * 2.4rem) / 6); }
+  .xs\:col-1 {
+    margin: 0 1.2rem;
+    width: calc((100% - 12 * 2.4rem) / 12); } }
 
-@media only screen and (max-width: 960px) {
-  .lg\:col-12 {
-    margin: 0 10px;
-    width: calc((100% - 1 * 20px) / 1);
-    float: left; }
-  .lg\:col-6 {
-    margin: 0 10px;
-    width: calc((100% - 2 * 20px) / 2);
-    float: left; }
-  .lg\:col-4 {
-    margin: 0 10px;
-    width: calc((100% - 3 * 20px) / 3);
-    float: left; }
-  .lg\:col-3 {
-    margin: 0 10px;
-    width: calc((100% - 4 * 20px) / 4);
-    float: left; }
-  .lg\:col-2 {
-    margin: 0 10px;
-    width: calc((100% - 6 * 20px) / 6);
-    float: left; }
-  .lg\:col-1 {
-    margin: 0 10px;
-    width: calc((100% - 12 * 20px) / 12);
-    float: left; } }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .md\:col-12 {
-    margin: 0 10px;
-    width: calc((100% - 1 * 20px) / 1);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
   .md\:col-6 {
-    margin: 0 10px;
-    width: calc((100% - 2 * 20px) / 2);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 2 * 2.4rem) / 2); }
   .md\:col-4 {
-    margin: 0 10px;
-    width: calc((100% - 3 * 20px) / 3);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
   .md\:col-3 {
-    margin: 0 10px;
-    width: calc((100% - 4 * 20px) / 4);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 4 * 2.4rem) / 4); }
   .md\:col-2 {
-    margin: 0 10px;
-    width: calc((100% - 6 * 20px) / 6);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 6 * 2.4rem) / 6); }
   .md\:col-1 {
-    margin: 0 10px;
-    width: calc((100% - 12 * 20px) / 12);
-    float: left; } }
+    margin: 0 1.2rem;
+    width: calc((100% - 12 * 2.4rem) / 12); } }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 480px) {
   .sm\:col-12 {
-    margin: 0 10px;
-    width: calc((100% - 1 * 20px) / 1);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
   .sm\:col-6 {
-    margin: 0 10px;
-    width: calc((100% - 2 * 20px) / 2);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 2 * 2.4rem) / 2); }
   .sm\:col-4 {
-    margin: 0 10px;
-    width: calc((100% - 3 * 20px) / 3);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
   .sm\:col-3 {
-    margin: 0 10px;
-    width: calc((100% - 4 * 20px) / 4);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 4 * 2.4rem) / 4); }
   .sm\:col-2 {
-    margin: 0 10px;
-    width: calc((100% - 6 * 20px) / 6);
-    float: left; }
+    margin: 0 1.2rem;
+    width: calc((100% - 6 * 2.4rem) / 6); }
   .sm\:col-1 {
-    margin: 0 10px;
-    width: calc((100% - 12 * 20px) / 12);
-    float: left; } }
+    margin: 0 1.2rem;
+    width: calc((100% - 12 * 2.4rem) / 12); } }
+
+@media only screen and (min-width: 960px) {
+  .lg\:col-12 {
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
+  .lg\:col-6 {
+    margin: 0 1.2rem;
+    width: calc((100% - 2 * 2.4rem) / 2); }
+  .lg\:col-4 {
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
+  .lg\:col-3 {
+    margin: 0 1.2rem;
+    width: calc((100% - 4 * 2.4rem) / 4); }
+  .lg\:col-2 {
+    margin: 0 1.2rem;
+    width: calc((100% - 6 * 2.4rem) / 6); }
+  .lg\:col-1 {
+    margin: 0 1.2rem;
+    width: calc((100% - 12 * 2.4rem) / 12); } }
+
+@media only screen and (min-width: 1440px) {
+  .xl\:col-12 {
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
+  .xl\:col-6 {
+    margin: 0 1.2rem;
+    width: calc((100% - 2 * 2.4rem) / 2); }
+  .xl\:col-4 {
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
+  .xl\:col-3 {
+    margin: 0 1.2rem;
+    width: calc((100% - 4 * 2.4rem) / 4); }
+  .xl\:col-2 {
+    margin: 0 1.2rem;
+    width: calc((100% - 6 * 2.4rem) / 6); }
+  .xl\:col-1 {
+    margin: 0 1.2rem;
+    width: calc((100% - 12 * 2.4rem) / 12); } }
 
 html {
   font-size: 62.5%; }
 
-.template {
-  margin-bottom: 3.3rem; }
+.section {
+  padding-top: 3.3rem;
+  padding-bottom: 3.3rem; }
+  .section-form__title-box {
+    max-width: 24rem;
+    margin: 0 auto;
+    margin-bottom: 3rem; }
+    .section-form__title-box > img {
+      width: 100%; }
 
-.todayReading {
-  counter-reset: read 0;
-  min-width: 540px;
-  max-width: 600px;
-  margin: auto;
-  margin-top: 3rem; }
+img {
+  vertical-align: middle; }
 
-.todayReading > li {
-  margin-bottom: 1.5rem; }
+@media only screen and (min-width: 480px) {
+  .section-form__title-box {
+    max-width: 27rem; } }
 
-.todayReading > .counter::before {
-  content: counters(read, "-") " ";
-  counter-increment: read;
-  font-size: 1.5rem;
-  margin-right: 1.2rem; }
+@media only screen and (min-width: 960px) {
+  .section {
+    padding-top: 6.9rem;
+    padding-bottom: 6.9rem; }
+    .section-form__title-box {
+      max-width: 36rem; } }
 
-.todayReading p {
-  font-size: 1.5rem;
-  padding: 1.2rem 0;
-  padding-left: 4.2rem;
-  line-height: 1.5; }
-
-ol a:link,
-ol a:visited {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.8rem; }
-
-ol a:hover {
-  color: #cd0000; }
-
-ol h2 {
-  font-size: 4.2rem;
-  margin-bottom: 1.5rem; }
-
-.base-link:link, .base-link:visited {
-  text-decoration: none;
-  color: #000; }
+@media only screen and (min-width: 1440px) {
+  .section-form__title-box {
+    max-width: none;
+    text-align: center; }
+    .section-form__title-box > img {
+      width: auto; } }
 
 .u-margin-b-ss {
   margin-bottom: 1.2rem; }
@@ -250,13 +245,139 @@ ol h2 {
 .t-r {
   text-align: right; }
 
+@media only screen and (min-width: 320px) {
+  .xs\:t-cn {
+    text-align: center; }
+  .xs\:t-l {
+    text-align: left; }
+  .xs\:t-r {
+    text-align: right; } }
+
+@media only screen and (min-width: 768px) {
+  .md\:t-cn {
+    text-align: center; }
+  .md\:t-l {
+    text-align: left; }
+  .md\:t-r {
+    text-align: right; } }
+
+@media only screen and (min-width: 480px) {
+  .sm\:t-cn {
+    text-align: center; }
+  .sm\:t-l {
+    text-align: left; }
+  .sm\:t-r {
+    text-align: right; } }
+
+@media only screen and (min-width: 960px) {
+  .lg\:t-cn {
+    text-align: center; }
+  .lg\:t-l {
+    text-align: left; }
+  .lg\:t-r {
+    text-align: right; } }
+
+@media only screen and (min-width: 1440px) {
+  .xl\:t-cn {
+    text-align: center; }
+  .xl\:t-l {
+    text-align: left; }
+  .xl\:t-r {
+    text-align: right; } }
+
+.u-text-white {
+  color: #fff; }
+
+.ring {
+  background: #d6251f;
+  position: relative;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%; }
+  .ring::before {
+    content: '';
+    box-shadow: inset 0.3rem -0.1rem 0 0.2rem #fa0e06, inset -0.2rem -0.01rem 0 0.3rem #97120e, 0 0 0 0.15rem #fff, 0 0 0 0.35rem #97120e, 0 0 0 0.45rem #fff, 0 0 0 0.65rem #97120e, 0 0 0 0.75rem #fff, 0 0 0 0.95rem #97120e;
+    border-radius: 50%; }
+  .ring__ball-1 {
+    position: absolute;
+    left: 0.1rem;
+    right: 0.1rem;
+    top: 0.1rem;
+    bottom: 0.1rem; }
+    .ring__ball-1::before, .ring__ball-1::after {
+      content: ''; }
+    .ring__ball-1::before {
+      background: radial-gradient(circle at center, #fa0e06, #fa0e06 0.5rem, transparent 0.5rem) no-repeat left top/1rem 1rem;
+      transform: rotate(12deg); }
+    .ring__ball-1::after {
+      background: radial-gradient(circle at center, #fa0e06, #fa0e06 0.6rem, transparent 0.6rem) no-repeat right bottom/1.2rem 1.2rem;
+      transform: rotate(-15deg); }
+  .ring__ball-2 {
+    position: absolute;
+    left: -0.3rem;
+    right: -0.3rem;
+    top: -0.3rem;
+    bottom: -0.3rem;
+    z-index: -1; }
+    .ring__ball-2::before, .ring__ball-2::after {
+      content: ''; }
+    .ring__ball-2::before {
+      background: radial-gradient(circle at center, #97120e, #97120e 0.7rem, transparent 0.7rem) no-repeat left top/1.4rem 1.4rem; }
+    .ring__ball-2::after {
+      position: absolute;
+      left: -0.21rem;
+      right: -0.21rem;
+      top: -0.21rem;
+      bottom: -0.21rem;
+      background: radial-gradient(circle at center, #97120e, #97120e 1rem, transparent 1rem) no-repeat right bottom/2rem 2rem; }
+  @media only screen and (min-width: 480px) {
+    .ring {
+      width: 7.5rem;
+      height: 7.5rem; } }
+  @media only screen and (min-width: 768px) {
+    .ring {
+      width: 9rem;
+      height: 9rem; } }
+  @media only screen and (min-width: 960px) {
+    .ring__ball-1 {
+      left: 0.3rem;
+      right: 0.3rem;
+      top: 0.3rem;
+      bottom: 0.3rem; }
+    .ring__ball-2 {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0; } }
+  @media only screen and (min-width: 1440px) {
+    .ring {
+      width: 12rem;
+      height: 12rem; }
+      .ring__ball-1 {
+        left: 0.6rem;
+        right: 0.6rem;
+        top: 0.6rem;
+        bottom: 0.6rem; }
+        .ring__ball-1::before {
+          background: radial-gradient(circle at center, #fa0e06, #fa0e06 0.6rem, transparent 0.6rem) no-repeat left top/1.2rem 1.2rem; }
+        .ring__ball-1::after {
+          background: radial-gradient(circle at center, #fa0e06, #fa0e06 0.75rem, transparent 0.75rem) no-repeat right bottom/1.5rem 1.5rem; }
+      .ring__ball-2 {
+        left: 0.3rem;
+        right: 0.3rem;
+        top: 0.3rem;
+        bottom: 0.3rem; }
+        .ring__ball-2::before {
+          background: radial-gradient(circle at center, #97120e, #97120e 0.9rem, transparent 0.9rem) no-repeat left top/1.8rem 1.8rem; }
+        .ring__ball-2::after {
+          background: radial-gradient(circle at center, #97120e, #97120e 1.2rem, transparent 1.2rem) no-repeat right bottom/2.4rem 2.4rem; } }
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
   color: #000;
-  font-size: 1.2rem;
-  padding: 1.2rem, 1.8rem;
-  box-shadow: 0 0 0 1px #000; }
+  font-size: 1.5rem;
+  padding: 1.2rem 1.8rem; }
 
 .bounce-shadow {
   position: absolute;
@@ -271,50 +392,3 @@ ol h2 {
   animation-duration: 2.1s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1); }
-
-.ring {
-  position: relative;
-  z-index: 0; }
-  .ring::before {
-    content: '';
-    border-radius: 50%;
-    box-shadow: inset 1px -1px 0 .15rem #00cdcd, inset 0 -1px 0 .3rem #cd00cd, 0 0 0 .2rem #fff, 0 0 0 .3rem #0000cd, 0 0 0 .5rem #fff, 0 0 0 .6rem #cd0000, 0 0 0 .8rem #fff, 0 0 0 .9rem #00cd00; }
-  .ring__ball-1 {
-    position: absolute;
-    left: -.03rem;
-    right: -.03rem;
-    top: -.03rem;
-    bottom: -.03rem; }
-    .ring__ball-1::after {
-      content: '';
-      background: radial-gradient(circle at center, #cd0000, #cd0000 0.6rem, transparent 0.6rem) no-repeat right bottom/1.2rem 1.2rem;
-      transform: rotate(-15deg); }
-    .ring__ball-1::before {
-      content: '';
-      background: radial-gradient(circle at center, #cd0000, #cd0000 0.45rem, transparent 0.45rem) no-repeat left top/0.9rem 0.9rem;
-      transform: rotate(15deg); }
-  .ring__ball-2 {
-    position: absolute;
-    left: -.5rem;
-    right: -.5rem;
-    top: -.5rem;
-    bottom: -.5rem;
-    z-index: -1; }
-    .ring__ball-2::after {
-      content: '';
-      background: radial-gradient(circle at center, #cd0000, #cd0000 0.7rem, transparent 0.7rem) no-repeat left top/1.4rem 1.4rem; }
-    .ring__ball-2::before {
-      content: '';
-      position: absolute;
-      left: -.21rem;
-      right: -.21rem;
-      top: -.21rem;
-      bottom: -.21rem;
-      background: radial-gradient(circle at center, #cd0000, #cd0000 0.9rem, transparent 0.9rem) no-repeat right bottom/2rem 2rem; }
-
-.ball {
-  width: 6rem;
-  height: 6rem;
-  margin: auto;
-  border-radius: 50%;
-  background: #aa6600; }

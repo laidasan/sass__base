@@ -1,62 +1,61 @@
 html {
     font-size: 62.5%;
 }
-// .section {
-//     margin: 3rem 0;
-// }
+.section {
+    padding-top: 3.3rem;
+    padding-bottom: 3.3rem;
 
-// .section__title {
-//     font-size: 4.2rem;
-//     margin-bottom: 1.8rem;
-//     text-align: center;
-// }
-
-.template {
-    margin-bottom: 3.3rem;
-}
-
-.todayReading {
-    counter-reset: read 0;
-    min-width: 540px;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 3rem;
-}
-.todayReading > li {
-    margin-bottom: 1.5rem;
-}
-.todayReading > .counter::before {
-    content: counters(read,'-') ' ';
-    counter-increment: read;
-    font-size: 1.5rem;
-    margin-right: 1.2rem;
-}
-.todayReading p {
-    font-size: 1.5rem;
-    padding: 1.2rem 0;
-    padding-left: 4.2rem;
-    line-height: 1.5;
+    &-form {
+        &__title-box {
+            max-width: 24rem;
+            margin: 0 auto;
+            margin-bottom: nth($m,9);
+    
+            > img {
+                width: 100%;
+            }
+        }
+    }
 }
 
-ol a:link,
-ol a:visited {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.8rem;
-}
-ol a:hover {
-    color: #cd0000;
+img {
+    vertical-align: middle;
 }
 
-ol h2 {
-    font-size: 4.2rem;
-    margin-bottom: 1.5rem;
+@include respond('sm') {
+    .section {
+        &-form {
+            &__title-box {
+                max-width: 27rem;
+            }
+        }
+    }
 }
 
-.base-link {
-    &:link,
-    &:visited {
-        text-decoration: none;
-        color: #000;
+@include respond('lg') {
+    .section {
+        padding-top: 6.9rem;
+        padding-bottom: 6.9rem;
+
+        &-form {
+            &__title-box {
+                max-width: 36rem;
+            }
+        }
+    }
+}
+
+@include respond('xl') {
+    .section {
+        &-form {
+            &__title-box {
+                max-width: none;
+                text-align: center;
+
+                > img {
+                    width: auto;
+                }
+            }
+        }
     }
 }
