@@ -46,7 +46,7 @@ $color-tb-border: #626262;
 
 
 // background - zebra
-$zebra-mode: line triangle;
+$zebra-mode: line triangle square;
 $zebra-config: (
     line: (
         bk-color-primary: $color-black,
@@ -55,8 +55,14 @@ $zebra-config: (
     ),
     triangle: (
         size: 15px 15px,
-        bk-color-primary: $color-black,
-        bk-color-sub: $color-white
+        bk-color-primary: #362a2a,
+        bk-color-sub: #56bb9b
+    ),
+    square: (
+        size: 7.5px,
+        rows: 8,
+        bk-color-primary: #362a2a,
+        bk-color-sub: #56bb9b
     )
 );
 

@@ -106,14 +106,40 @@
     background-size: 100% / map-get($config,columns);
 }
 
+@mixin zebra-triangle($config) {
+    background: linear-gradient(45deg,map-get($config,bk-color-primary) , map-get($config,bk-color-primary) 50% ,map-get($config,bk-color-sub) 50%);
+    background-size: map-get($config,size);
+}
+
+@mixin zebra-square($config) {
+    $bk-list: null;
+
+    @for $var from 1 through map-get($config,rows) {
+        @if $var % 2 == 0 {
+            $bk-list: append($bk-list,linear-gradient(90deg , map-get($config,bk-color-sub) , map-get($config,bk-color-sub) 50% , map-get($config,bk-color-primary) 50%) repeat-x left map-get($config,size) * ($var - 1),comma);
+        } @else {
+            $bk-list: append($bk-list,linear-gradient(90deg , map-get($config,bk-color-primary) , map-get($config,bk-color-primary) 50% , map-get($config,bk-color-sub) 50%) repeat-x left map-get($config,size) * ($var - 1),comma);
+        }
+    }
+
+    background: $bk-list;
+    background-size: map-get($config,size) * 2  map-get($config,size);
+}
+
 @mixin zebra($mode,$config:$zebra-config) {
     @if get-mode($zebra-mode,$mode) == line {
         @include zebra-line(map-get($config,line));
     }
+    @if get-mode($zebra-mode,$mode) == triangle {
+        @include zebra-triangle(map-get($config,triangle));
+    }
+    @if get-mode($zebra-mode,$mode) == square {
+        @include zebra-square(map-get($config,square));
+    }
 }
 
 .zebra-line {
-    @include zebra(0);
+    @include zebra(2);
 }
 
 // under line 
