@@ -62,10 +62,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
-.zebra-line {
-  background: linear-gradient(90deg, #362a2a, #362a2a 50%, #56bb9b 50%) repeat-x left 0px, linear-gradient(90deg, #56bb9b, #56bb9b 50%, #362a2a 50%) repeat-x left 7.5px, linear-gradient(90deg, #362a2a, #362a2a 50%, #56bb9b 50%) repeat-x left 15px, linear-gradient(90deg, #56bb9b, #56bb9b 50%, #362a2a 50%) repeat-x left 22.5px, linear-gradient(90deg, #362a2a, #362a2a 50%, #56bb9b 50%) repeat-x left 30px, linear-gradient(90deg, #56bb9b, #56bb9b 50%, #362a2a 50%) repeat-x left 37.5px, linear-gradient(90deg, #362a2a, #362a2a 50%, #56bb9b 50%) repeat-x left 45px, linear-gradient(90deg, #56bb9b, #56bb9b 50%, #362a2a 50%) repeat-x left 52.5px;
-  background-size: 15px 7.5px; }
-
 .col-12 {
   margin: 0 1.2rem;
   width: calc((100% - 1 * 2.4rem) / 1); }

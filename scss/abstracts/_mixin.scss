@@ -100,15 +100,22 @@
 }
 
 // bk
-
+// zebra , @include zebra( mode(number) )
 @mixin zebra-line($config) {
-    background: linear-gradient(90deg,map-get($config,bk-color-primary),map-get($config,bk-color-primary) 50%,map-get($config,bk-color-sub) 50%);
-    background-size: 100% / map-get($config,columns);
+    @if map-get($config,repeat-gradient) {
+        background: repeating-linear-gradient(#{map-get($config,rotate)}deg,map-get($config,bk-color-primary),map-get($config,bk-color-primary) map-get($config,size),map-get($config,bk-color-sub) map-get($config,size) , map-get($config,bk-color-sub) map-get($config,size) * 2);
+        background-repeat: map-get($config,bk-repeat);
+        background-size: 100% / map-get($config,columns);
+    } @else {
+        background: linear-gradient(#{map-get($config,rotate)}deg,map-get($config,bk-color-primary),map-get($config,bk-color-primary) map-get($config,size),map-get($config,bk-color-sub) map-get($config,size));
+        background-repeat: map-get($config,bk-repeat);
+        background-size: 100% / map-get($config,columns);
+    }
 }
 
 @mixin zebra-triangle($config) {
-    background: linear-gradient(45deg,map-get($config,bk-color-primary) , map-get($config,bk-color-primary) 50% ,map-get($config,bk-color-sub) 50%);
-    background-size: map-get($config,size);
+    background: linear-gradient(45deg,map-get($config,bk-color-primary) , map-get($config,bk-color-primary) map-get($config,size) ,map-get($config,bk-color-sub) map-get($config,size));
+    background-size: map-get($config,bk-size);
 }
 
 @mixin zebra-square($config) {
@@ -126,7 +133,7 @@
     background-size: map-get($config,size) * 2  map-get($config,size);
 }
 
-@mixin zebra($mode,$config:$zebra-config) {
+@mixin zebra($mode:0,$config:$zebra-config) {
     @if get-mode($zebra-mode,$mode) == line {
         @include zebra-line(map-get($config,line));
     }
@@ -138,9 +145,6 @@
     }
 }
 
-.zebra-line {
-    @include zebra(2);
-}
 
 // under line 
 @mixin under-line($move:0,$h:.12rem,$position:relative,$color:#000) {

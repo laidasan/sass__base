@@ -49,18 +49,23 @@ $color-tb-border: #626262;
 $zebra-mode: line triangle square;
 $zebra-config: (
     line: (
-        bk-color-primary: $color-black,
-        bk-color-sub: transparent,
-        columns: 2
+        size: 50%,
+        repeat-gradient: false,
+        bk-color-primary: #56bb9b,
+        bk-color-sub: $color-white,
+        columns: 2,
+        rotate: 90,
+        bk-repeat: repeat
     ),
     triangle: (
-        size: 15px 15px,
+        size: 50%,
+        bk-size: 15px 15px,
         bk-color-primary: #362a2a,
         bk-color-sub: #56bb9b
     ),
     square: (
-        size: 7.5px,
-        rows: 8,
+        size: 15px,
+        rows: 4,
         bk-color-primary: #362a2a,
         bk-color-sub: #56bb9b
     )
