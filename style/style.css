@@ -281,6 +281,66 @@ img {
   .xl\:t-r {
     text-align: right; } }
 
+@media only screen and (min-width: 320px) {
+  .xs\:d-b {
+    display: block; }
+  .xs\:d-in {
+    display: inline; }
+  .xs\:d-inb {
+    display: inline-block; }
+  .xs\:d-flex {
+    display: flex; }
+  .xs\:d-grid {
+    display: grid; } }
+
+@media only screen and (min-width: 768px) {
+  .md\:d-b {
+    display: block; }
+  .md\:d-in {
+    display: inline; }
+  .md\:d-inb {
+    display: inline-block; }
+  .md\:d-flex {
+    display: flex; }
+  .md\:d-grid {
+    display: grid; } }
+
+@media only screen and (min-width: 480px) {
+  .sm\:d-b {
+    display: block; }
+  .sm\:d-in {
+    display: inline; }
+  .sm\:d-inb {
+    display: inline-block; }
+  .sm\:d-flex {
+    display: flex; }
+  .sm\:d-grid {
+    display: grid; } }
+
+@media only screen and (min-width: 960px) {
+  .lg\:d-b {
+    display: block; }
+  .lg\:d-in {
+    display: inline; }
+  .lg\:d-inb {
+    display: inline-block; }
+  .lg\:d-flex {
+    display: flex; }
+  .lg\:d-grid {
+    display: grid; } }
+
+@media only screen and (min-width: 1440px) {
+  .xl\:d-b {
+    display: block; }
+  .xl\:d-in {
+    display: inline; }
+  .xl\:d-inb {
+    display: inline-block; }
+  .xl\:d-flex {
+    display: flex; }
+  .xl\:d-grid {
+    display: grid; } }
+
 .u-text-white {
   color: #fff; }
 

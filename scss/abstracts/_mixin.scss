@@ -193,6 +193,10 @@
 }
 
 // ring
+// use it
+// ring
+//   ring__ball-1
+//   ring__ball-2
 @mixin ring($custom:false,$config:$ring-config) {
     background: map-get(map-get($config,bk),bk-normal);
     &::before {

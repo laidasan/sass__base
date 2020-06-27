@@ -1,0 +1,130 @@
+{
+
+
+
+	"set margin from list": {
+		"prefix": "nm",
+		"body": [
+		  "nth(\\$m,)"
+		],
+		"description": "get margin list"
+	},
+
+	"set margin bottom from list": {
+		"prefix": "nmb",
+		"body": [
+		  "margin-bottom: nth(\\$m,);"
+		],
+		"description": "set margin bottom from list"
+	},
+	
+
+
+	"set padding from list": {
+		"prefix": "np",
+		"body": [
+		  "nth(\\$p,)"
+		],
+		"description": "set padding from list"
+	},
+
+	"set padding tb0 lr from list": {
+		"prefix": "nplr",
+		"body": [
+		  "padding: 0 nth(\\$p,);"
+		],
+		"description": "set padding tb0 lr from list"
+	},
+
+	"set padding tb from list": {
+		"prefix": "nptb",
+		"body": [
+		  "padding: nth(\\$p,) 0;"
+		],
+		"description": "set padding tb from list"
+	},
+
+	"set padding-left from list": {
+		"prefix": "npl",
+		"body": [
+		  "padding-left: nth(\\$p,);"
+		],
+		"description": "set padding-left from list"
+	},
+	"set padding-right from list": {
+		"prefix": "npr",
+		"body": [
+		  "padding-right: nth(\\$p,);"
+		],
+		"description": "set padding-left from list"
+	},
+	"set padding-top from list": {
+		"prefix": "npt",
+		"body": [
+		  "padding-top: nth(\\$p,);"
+		],
+		"description": "set padding-left from list"
+	},
+	"set padding-bottom from list": {
+		"prefix": "npb",
+		"body": [
+		  "padding-bottom: nth(\\$p,);"
+		],
+		"description": "set padding-left from list"
+	},
+
+	"set padding-left": {
+		"prefix": "pl",
+		"body": [
+		  "padding-left: ;"
+		],
+		"description": "set padding-left"
+	},
+	"set padding-right": {
+		"prefix": "pr",
+		"body": [
+		  "padding-right: ;"
+		],
+		"description": "set padding-left"
+	},
+	"set padding-top": {
+		"prefix": "pt",
+		"body": [
+		  "padding-top: ;"
+		],
+		"description": "set padding-left"
+	},
+	"set padding-bottom": {
+		"prefix": "pb",
+		"body": [
+		  "padding-bottom: ;"
+		],
+		"description": "set padding-left"
+	},
+
+
+
+	"include mixin font": {
+		"prefix": "inf",
+		"body": [
+		  "@include font();"
+		],
+		"description": "include mixin font"
+	},
+	
+	"set font-size from list": {
+		"prefix": "nf",
+		"body": [
+		  "font-size: nth(\\$font-size,);"
+		],
+		"description": "set font-size from list"
+	},
+
+	"set box-shadow": {
+		"prefix": "bxsh",
+		"body": [
+		  "box-shadow: 0 0 0 1px \\$color-black;"
+		],
+		"description": "set box-shadow"
+	}
+}

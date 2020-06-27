@@ -29,6 +29,7 @@
     }
 }
 
+
 @each $key,$value in $breakpoints {
     @include respond($key) {
         .#{$key}\:t {
@@ -39,7 +40,25 @@
     }
 }
 
+
+// display
+@each $key , $value in $breakpoints {
+    @include respond($key) {
+        .#{$key}\:d {
+            &-b { display: block; }
+
+            &-in { display: inline; }
+
+            &-inb { display: inline-block; }
+
+            &-flex { display: flex; }
+
+            &-grid { display: grid }
+        }
+    }
+}
 .u-text-white {
     color: $color-white;
 }
+
 
