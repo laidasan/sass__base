@@ -62,129 +62,167 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
-.col-12 {
+.col-24 {
   margin: 0 1.2rem;
   width: calc((100% - 1 * 2.4rem) / 1); }
 
-.col-6 {
+.col-12 {
   margin: 0 1.2rem;
   width: calc((100% - 2 * 2.4rem) / 2); }
 
-.col-4 {
+.col-8 {
   margin: 0 1.2rem;
   width: calc((100% - 3 * 2.4rem) / 3); }
 
-.col-3 {
+.col-6 {
   margin: 0 1.2rem;
   width: calc((100% - 4 * 2.4rem) / 4); }
 
-.col-2 {
+.col-4 {
   margin: 0 1.2rem;
   width: calc((100% - 6 * 2.4rem) / 6); }
 
-.col-1 {
+.col-3 {
+  margin: 0 1.2rem;
+  width: calc((100% - 8 * 2.4rem) / 8); }
+
+.col-2 {
   margin: 0 1.2rem;
   width: calc((100% - 12 * 2.4rem) / 12); }
 
+.col-1 {
+  margin: 0 1.2rem;
+  width: calc((100% - 24 * 2.4rem) / 24); }
+
 @media only screen and (min-width: 320px) {
+  .xs\:col-24 {
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
   .xs\:col-12 {
     margin: 0 1.2rem;
-    width: calc((100% - 1 * 2.4rem) / 1); }
+    width: calc((100% - 2 * 2.4rem) / 2); }
+  .xs\:col-8 {
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
   .xs\:col-6 {
     margin: 0 1.2rem;
-    width: calc((100% - 2 * 2.4rem) / 2); }
+    width: calc((100% - 4 * 2.4rem) / 4); }
   .xs\:col-4 {
     margin: 0 1.2rem;
-    width: calc((100% - 3 * 2.4rem) / 3); }
+    width: calc((100% - 6 * 2.4rem) / 6); }
   .xs\:col-3 {
     margin: 0 1.2rem;
-    width: calc((100% - 4 * 2.4rem) / 4); }
+    width: calc((100% - 8 * 2.4rem) / 8); }
   .xs\:col-2 {
     margin: 0 1.2rem;
-    width: calc((100% - 6 * 2.4rem) / 6); }
+    width: calc((100% - 12 * 2.4rem) / 12); }
   .xs\:col-1 {
     margin: 0 1.2rem;
-    width: calc((100% - 12 * 2.4rem) / 12); } }
+    width: calc((100% - 24 * 2.4rem) / 24); } }
 
 @media only screen and (min-width: 768px) {
+  .md\:col-24 {
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
   .md\:col-12 {
     margin: 0 1.2rem;
-    width: calc((100% - 1 * 2.4rem) / 1); }
+    width: calc((100% - 2 * 2.4rem) / 2); }
+  .md\:col-8 {
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
   .md\:col-6 {
     margin: 0 1.2rem;
-    width: calc((100% - 2 * 2.4rem) / 2); }
+    width: calc((100% - 4 * 2.4rem) / 4); }
   .md\:col-4 {
     margin: 0 1.2rem;
-    width: calc((100% - 3 * 2.4rem) / 3); }
+    width: calc((100% - 6 * 2.4rem) / 6); }
   .md\:col-3 {
     margin: 0 1.2rem;
-    width: calc((100% - 4 * 2.4rem) / 4); }
+    width: calc((100% - 8 * 2.4rem) / 8); }
   .md\:col-2 {
     margin: 0 1.2rem;
-    width: calc((100% - 6 * 2.4rem) / 6); }
+    width: calc((100% - 12 * 2.4rem) / 12); }
   .md\:col-1 {
     margin: 0 1.2rem;
-    width: calc((100% - 12 * 2.4rem) / 12); } }
+    width: calc((100% - 24 * 2.4rem) / 24); } }
 
 @media only screen and (min-width: 480px) {
+  .sm\:col-24 {
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
   .sm\:col-12 {
     margin: 0 1.2rem;
-    width: calc((100% - 1 * 2.4rem) / 1); }
+    width: calc((100% - 2 * 2.4rem) / 2); }
+  .sm\:col-8 {
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
   .sm\:col-6 {
     margin: 0 1.2rem;
-    width: calc((100% - 2 * 2.4rem) / 2); }
+    width: calc((100% - 4 * 2.4rem) / 4); }
   .sm\:col-4 {
     margin: 0 1.2rem;
-    width: calc((100% - 3 * 2.4rem) / 3); }
+    width: calc((100% - 6 * 2.4rem) / 6); }
   .sm\:col-3 {
     margin: 0 1.2rem;
-    width: calc((100% - 4 * 2.4rem) / 4); }
+    width: calc((100% - 8 * 2.4rem) / 8); }
   .sm\:col-2 {
     margin: 0 1.2rem;
-    width: calc((100% - 6 * 2.4rem) / 6); }
+    width: calc((100% - 12 * 2.4rem) / 12); }
   .sm\:col-1 {
     margin: 0 1.2rem;
-    width: calc((100% - 12 * 2.4rem) / 12); } }
+    width: calc((100% - 24 * 2.4rem) / 24); } }
 
 @media only screen and (min-width: 960px) {
+  .lg\:col-24 {
+    margin: 0 1.2rem;
+    width: calc((100% - 1 * 2.4rem) / 1); }
   .lg\:col-12 {
     margin: 0 1.2rem;
-    width: calc((100% - 1 * 2.4rem) / 1); }
+    width: calc((100% - 2 * 2.4rem) / 2); }
+  .lg\:col-8 {
+    margin: 0 1.2rem;
+    width: calc((100% - 3 * 2.4rem) / 3); }
   .lg\:col-6 {
     margin: 0 1.2rem;
-    width: calc((100% - 2 * 2.4rem) / 2); }
+    width: calc((100% - 4 * 2.4rem) / 4); }
   .lg\:col-4 {
     margin: 0 1.2rem;
-    width: calc((100% - 3 * 2.4rem) / 3); }
+    width: calc((100% - 6 * 2.4rem) / 6); }
   .lg\:col-3 {
     margin: 0 1.2rem;
-    width: calc((100% - 4 * 2.4rem) / 4); }
+    width: calc((100% - 8 * 2.4rem) / 8); }
   .lg\:col-2 {
     margin: 0 1.2rem;
-    width: calc((100% - 6 * 2.4rem) / 6); }
+    width: calc((100% - 12 * 2.4rem) / 12); }
   .lg\:col-1 {
     margin: 0 1.2rem;
-    width: calc((100% - 12 * 2.4rem) / 12); } }
+    width: calc((100% - 24 * 2.4rem) / 24); } }
 
 @media only screen and (min-width: 1440px) {
-  .xl\:col-12 {
+  .xl\:col-24 {
     margin: 0 1.2rem;
     width: calc((100% - 1 * 2.4rem) / 1); }
-  .xl\:col-6 {
+  .xl\:col-12 {
     margin: 0 1.2rem;
     width: calc((100% - 2 * 2.4rem) / 2); }
-  .xl\:col-4 {
+  .xl\:col-8 {
     margin: 0 1.2rem;
     width: calc((100% - 3 * 2.4rem) / 3); }
-  .xl\:col-3 {
+  .xl\:col-6 {
     margin: 0 1.2rem;
     width: calc((100% - 4 * 2.4rem) / 4); }
-  .xl\:col-2 {
+  .xl\:col-4 {
     margin: 0 1.2rem;
     width: calc((100% - 6 * 2.4rem) / 6); }
+  .xl\:col-3 {
+    margin: 0 1.2rem;
+    width: calc((100% - 8 * 2.4rem) / 8); }
+  .xl\:col-2 {
+    margin: 0 1.2rem;
+    width: calc((100% - 12 * 2.4rem) / 12); }
   .xl\:col-1 {
     margin: 0 1.2rem;
-    width: calc((100% - 12 * 2.4rem) / 12); } }
+    width: calc((100% - 24 * 2.4rem) / 24); } }
 
 html {
   font-size: 62.5%; }

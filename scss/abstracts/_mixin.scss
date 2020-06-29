@@ -133,6 +133,8 @@
     background-size: map-get($config,size) * 2  map-get($config,size);
 }
 
+// zebra main
+// ex: @include zebra(0);
 @mixin zebra($mode:0,$config:$zebra-config) {
     @if get-mode($zebra-mode,$mode) == line {
         @include zebra-line(map-get($config,line));
