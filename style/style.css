@@ -94,7 +94,7 @@
   margin: 0 1.2rem;
   width: calc((100% - 24 * 2.4rem) / 24); }
 
-@media only screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .xs\:col-24 {
     margin: 0 1.2rem;
     width: calc((100% - 1 * 2.4rem) / 1); }
@@ -120,7 +120,7 @@
     margin: 0 1.2rem;
     width: calc((100% - 24 * 2.4rem) / 24); } }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .md\:col-24 {
     margin: 0 1.2rem;
     width: calc((100% - 1 * 2.4rem) / 1); }
@@ -146,7 +146,7 @@
     margin: 0 1.2rem;
     width: calc((100% - 24 * 2.4rem) / 24); } }
 
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .sm\:col-24 {
     margin: 0 1.2rem;
     width: calc((100% - 1 * 2.4rem) / 1); }
@@ -172,7 +172,7 @@
     margin: 0 1.2rem;
     width: calc((100% - 24 * 2.4rem) / 24); } }
 
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .lg\:col-24 {
     margin: 0 1.2rem;
     width: calc((100% - 1 * 2.4rem) / 1); }
@@ -198,7 +198,7 @@
     margin: 0 1.2rem;
     width: calc((100% - 24 * 2.4rem) / 24); } }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .xl\:col-24 {
     margin: 0 1.2rem;
     width: calc((100% - 1 * 2.4rem) / 1); }
@@ -240,18 +240,18 @@ html {
 img {
   vertical-align: middle; }
 
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .section-form__title-box {
     max-width: 27rem; } }
 
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .section {
     padding-top: 6.9rem;
     padding-bottom: 6.9rem; }
     .section-form__title-box {
       max-width: 36rem; } }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .section-form__title-box {
     max-width: none;
     text-align: center; }
@@ -279,7 +279,7 @@ img {
 .t-r {
   text-align: right; }
 
-@media only screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .xs\:t-cn {
     text-align: center; }
   .xs\:t-l {
@@ -287,7 +287,7 @@ img {
   .xs\:t-r {
     text-align: right; } }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .md\:t-cn {
     text-align: center; }
   .md\:t-l {
@@ -295,7 +295,7 @@ img {
   .md\:t-r {
     text-align: right; } }
 
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .sm\:t-cn {
     text-align: center; }
   .sm\:t-l {
@@ -303,7 +303,7 @@ img {
   .sm\:t-r {
     text-align: right; } }
 
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .lg\:t-cn {
     text-align: center; }
   .lg\:t-l {
@@ -311,7 +311,7 @@ img {
   .lg\:t-r {
     text-align: right; } }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .xl\:t-cn {
     text-align: center; }
   .xl\:t-l {
@@ -319,7 +319,7 @@ img {
   .xl\:t-r {
     text-align: right; } }
 
-@media only screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .xs\:d-b {
     display: block; }
   .xs\:d-in {
@@ -331,7 +331,7 @@ img {
   .xs\:d-grid {
     display: grid; } }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .md\:d-b {
     display: block; }
   .md\:d-in {
@@ -343,7 +343,7 @@ img {
   .md\:d-grid {
     display: grid; } }
 
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .sm\:d-b {
     display: block; }
   .sm\:d-in {
@@ -355,7 +355,7 @@ img {
   .sm\:d-grid {
     display: grid; } }
 
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .lg\:d-b {
     display: block; }
   .lg\:d-in {
@@ -367,7 +367,7 @@ img {
   .lg\:d-grid {
     display: grid; } }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .xl\:d-b {
     display: block; }
   .xl\:d-in {
@@ -424,15 +424,15 @@ img {
       top: -0.21rem;
       bottom: -0.21rem;
       background: radial-gradient(circle at center, #97120e, #97120e 1rem, transparent 1rem) no-repeat right bottom/2rem 2rem; }
-  @media only screen and (min-width: 480px) {
+  @media screen and (min-width: 480px) {
     .ring {
       width: 7.5rem;
       height: 7.5rem; } }
-  @media only screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .ring {
       width: 9rem;
       height: 9rem; } }
-  @media only screen and (min-width: 960px) {
+  @media screen and (min-width: 960px) {
     .ring__ball-1 {
       left: 0.3rem;
       right: 0.3rem;
@@ -443,7 +443,7 @@ img {
       right: 0;
       top: 0;
       bottom: 0; } }
-  @media only screen and (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     .ring {
       width: 12rem;
       height: 12rem; }

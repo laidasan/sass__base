@@ -1,14 +1,14 @@
 // RwD
 @mixin respond-down($width) {
-    @media only screen and (max-width: $width) { @content }
+    @media screen and (max-width: $width) { @content }
 };
 @mixin respond-up($width) {
-    @media only screen and (min-width: $width) {@content}
+    @media screen and (min-width: $width) {@content}
 };
 
 
 @mixin respond($breakpoint) {
-    @media only screen and (min-width: map-get($breakpoints, $breakpoint)){@content}
+    @media  screen and (min-width: map-get($breakpoints, $breakpoint)){@content}
 };
 
 
