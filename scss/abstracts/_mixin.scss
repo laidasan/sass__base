@@ -2,7 +2,7 @@
 @mixin respond-down($width) {
     @media screen and (max-width: $width) { @content }
 };
-@mixin respond-up($width) {
+@mixin respond-above($width) {
     @media screen and (min-width: $width) {@content}
 };
 
@@ -76,27 +76,40 @@
 // $gutter 帶任何單位都可以 px , rem , em , % etc....
 // 一個 container 裡面一次只能使用一種 mode （不能混用）
 // 但因為 { between（兩端貼邊） , even（間距相同） } 這兩種模式都需要準確的選頭或是尾來增減間距
-// 所以限制較大 , 這兩種 mode 除了一個 container 裡面只能塞一種 mode 外 , 也只能夠使用一種欄位數量（比如說-col-1,就只能用col-1)
-// around 則可以使用不同種欄位數量 , 缺點是無法靠邊對齊（grid-system 產生的css , 如 col-1 , 用的是 around
+// 所以限制較大 , 這兩種 mode 除了一個 container 裡面只能塞同一種 mode 外 , 也只能夠使用一種欄位數量（比如說-col-1,就只能用col-1)
+// around 則可以使用不同種欄位數量 , 缺點是無法靠邊對齊（grid-system 產生的css , 如 col-1 , 用的是 around , 需要去計算 wrapper的寬度
 // 結構為：
-// wrapper - 設置寬度 , around mode 額外再加 $gutter , 才能夠內容（colmuns)正確寬度
-//  container
+// wrapper - 設置 max-width 控制寬度 , 不使用 margin padding , around mode 額外再加 $gutter , 才能夠內容（colmuns)正確寬度
+//  container - 控制邊緣間距 , 這裡不設置寬度 , 只設置 padding , border , margin 
 //   columns
-@mixin grid-sys($col-nm,$col-gutter:20px,$mode:between) {
-    @if $mode == between {
-        margin-right: $col-gutter;
-        width: calc((100% - #{($col-nm - 1)} * #{$col-gutter}) / #{$col-nm});
-        &:nth-child(#{$col-nm}n) { margin-right: 0;}
-    };
-    @if $mode == around {
-        margin: 0 $col-gutter / 2;
-        width: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
+@mixin grid-sys($col-nm,$type:float,$col-gutter:20px,$mode:between) {
+    @if $type == flex {
+        flex-basis: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
     }
-    @if $mode == even {
-        margin-right: $col-gutter;
-        width: calc((100% - #{($col-nm + 1)} * #{$col-gutter}) / #{$col-nm});
-        &:nth-child(#{$col-nm}n + 1) { margin-left: $col-gutter;}
-    };
+    @if $type == float {
+        float: left;
+        @if $mode == between {
+            margin-right: $col-gutter;
+            width: calc((100% - #{($col-nm - 1)} * #{$col-gutter}) / #{$col-nm});
+            &:nth-child(#{$col-nm}n) { margin-right: 0;}
+        };
+        @if $mode == around {
+            margin-left: $col-gutter / 2;
+            margin-right: $col-gutter / 2;
+            width: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
+        }
+        @if $mode == even {
+            margin-right: $col-gutter;
+            width: calc((100% - #{($col-nm + 1)} * #{$col-gutter}) / #{$col-nm});
+            &:nth-child(#{$col-nm}n + 1) { margin-left: $col-gutter;}
+        };
+    }
+}
+
+@mixin grid-wrapper($max-width,$con-gutter:$container-gutter,$col-gutter:$gutter) {
+    max-width: calc(#{$max-width} + #{$con-gutter} + #{$col-gutter});
+    // margin-left: auto;
+    // margin-right: auto;
 }
 
 // bk
@@ -341,3 +354,42 @@
         @include btn-flyin($ani-type);
     }
 }
+
+// 06/29 待整理
+// word spectial effects
+
+// 傾斜字體 , and 特殊字型 , 由 after 與 本體台重疊字體達成特殊字型（相同的 skewX , 因為會編籬會有些差距 造成重疊部分不同 , 變成特殊字體
+// 再用 transform-3d 與 perspective 與調整 perspective-origin 來造成子體 3d 斜的效果
+// @mixin word-eff($mode) {
+//     @if $mode == 0 {
+//         position: relative;
+//         transform-style: preserve-3d;
+
+//         & , &::after {
+//             @include font(9,0,4);
+//             letter-spacing: 6px;
+//             transform: skewX(-12deg) skewY(-12deg) rotateY(-30deg) translateX(-24px);
+//             color: transparent;
+//             background: linear-gradient(to top,$color-text-thread-dark , $color-text-thread-dark 50% , $color-text-thread 0);
+//             background-clip: text;
+//             -webkit-background-clip: text;
+//         }
+//         &-1 {
+//             left: 1.2rem;
+//         }
+
+//         &-1::after,&-2::after {
+//             @extend %ab-fill;
+//             z-index: -1;
+//             transform: skewX(-12deg) skewY(0deg);
+//         }
+
+//         &-1::after {
+//             content: 'AMAZE';
+//         }
+
+//         &-2::after {
+//             content: 'YOURSELF';
+//         }
+//     }
+// }

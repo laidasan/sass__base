@@ -1,21 +1,33 @@
 // base
 $breakpoints: (
     'xs' : 320px,
-    'md' : 768px,
     'sm' : 480px,
+    'sm-x': 600px,
+    'md' : 768px,
     'lg' : 960px,
-    'xl' : 1440px
+    'xl' : 1440px,
 );
 
 // grid-sys
+$wrapper-width: (
+    xs: 90%,
+    sm : 480,
+    md : 600 768,
+    lg : 768 960,
+    xl : 960 1440
+);
 $columns: 24;
-$gutter: 2.4rem;
+$gutter: 24px;
+$container-gutter: 0px;
+$xs-wrapper: 95%;
 
 $font-size: 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem;
 $font-weight: 400 500 700 900;
 
-$m: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
-$p: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
+// $m: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
+// $p: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
+$m: 6px 9px 12px 15px 18px 21px 24px 27px 30px 36px 39px 42px 45px 48px;
+$p: 6px 9px 12px 15px 18px 21px 24px 27px 30px 36px 39px 42px 45px 48px;
 
 $border-radius: 3px 6px 9px 12px;
 $border-radius-circle: 50%;

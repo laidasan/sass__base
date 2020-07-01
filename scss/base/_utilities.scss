@@ -1,19 +1,11 @@
-.u-margin-b {
-    &-ss {
-        margin-bottom: 1.2rem;
-    }
-    &-s {
-        margin-bottom: 1.8rem;
-    }
-    &-m {
-        margin-bottom: 2.4rem;
-    }
-    &-b {
-        margin-bottom: 3.6rem;
+// margin bottom
+@for $var from 0 through length($m) - 1 {
+    .mb#{6 + 3 * $var} {
+        margin-bottom: nth($m,$var + 1);
     }
 }
 
-
+// text-align
 .t {
 
     &-cn {
@@ -57,8 +49,68 @@
         }
     }
 }
-.u-text-white {
-    color: $color-white;
+
+
+// grid-sys
+
+// grid-wrapper
+.grid-wrapper {
+    // max-width: 90%;
+    // margin-right: auto;
+    // margin-left:  auto;
+}
+
+@each $key,$value in $breakpoints {
+    @if $key == 'xs' {
+        .grid-wrapper {
+            max-width: map-get($wrapper-width,$key);
+            margin-right: auto;
+            margin-left:  auto;
+        }
+    }
+    @if $key != 'xs' and $key != 'sm-x'{
+        @include respond($key) {
+            @for $i from 0 through length(map-get($wrapper-width,$key)) - 1 {
+                .#{$key}\:gw#{nth(map-get($wrapper-width,$key),$i + 1)} {
+                    $w: nth(map-get($wrapper-width,$key),$i + 1);
+                    @include grid-wrapper(#{$w}px);
+                }
+            }
+        }
+    }
+}
+
+// grid-container
+.grid-container {
+    margin-left: $container-gutter / 2;
+    margin-right: $container-gutter / 2;
+    @include clear;
+}
+
+
+// grid-col
+@for $col-nm from 1 through $columns {
+    @if $columns % $col-nm == 0 {
+        .col-#{$columns / $col-nm} {
+            @include grid-sys($col-nm,float,$gutter,around);
+            // float: left;
+        }
+    }
+}
+
+@each $key,$value in $breakpoints {
+    @if $key != xs {
+        @include respond($key) {
+            @for $col-nm from 1 through $columns {
+                @if $columns % $col-nm == 0 {
+                    .#{$key}\:col-#{$columns / $col-nm} {
+                        @include grid-sys($col-nm,float,$gutter,around);
+                        // float: left;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

@@ -10,15 +10,17 @@
 <style>
     body {
         height: 100vh;
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         align-items: center;
     }
     .wrapper {
         /* max-width: 1044px; */
-        min-width: 1048px;
+        /* min-width: 1048px; */
         /* width: 1044px; */
-        margin: auto;
+        max-width: 1020px;
+        margin-left: auto;
+        margin-right: auto;
         min-height: 150px;
         box-shadow: 0 0 0 3px #cd0000;
         background: rgba(0,200,200,.3)
@@ -26,6 +28,7 @@
 
     .container {
         background: #00aaaa;
+        margin: 0 20px;
     }   
 
     .container::after {
@@ -48,13 +51,148 @@
         height: 9rem;
         border-radius: 50%;
     }
-    .box {
+    /* .box {
         width: 6rem;
         height: 6rem;
         box-shadow: 0 0 0 1px #cd0000;
+    } */
+    
+    .box-out {
+    }
+
+    .box {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 0 0 1px #cd0000;
+        margin-bottom: 3rem;
+    }
+    .box-2 {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 0 0 1px #cd0000;
+    }
+
+    .box-in {
+        /* margin-left: 10px; */
+        /* margin-right: 10px; */
+        box-shadow: 0 0 0 1px #000;
+    }
+    .box-in > p {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 </style>
 <body>
+    <!-- 基本卡片樣式 -->
+    <div class="prc">
+        <h1 class="prc__title t-cn mb15">How to send money from GBP to EUR.</h1>
+        <div class="grid-wrapper md:gw768 lg:gw768 xl:gw960">
+            <div class="grid-container prc-container">
+                <div class="prc__content sm-x:col-12 lg:col-8 mb12">
+                    <div class="prc__content__img-box"><img src="./img/下載.svg" alt=""></div>
+                    <div class="prc__content-txt sm-x:t-cn">
+                        <h2 class="prc__content__title">Register for free.</h2>
+                        <p class="prc__content__article">Sign up online or in our app for free. All you need is an email address, or a Google or Facebook account.</p>
+                    </div>
+                </div>
+                <div class="prc__content sm-x:col-12 lg:col-8 mb12">
+                    <div class="prc__content__img-box"><img src="./img/下載.svg" alt=""></div>
+                    <div class="prc__content-txt sm-x:t-cn">
+                        <h2 class="prc__content__title">Register for free.</h2>
+                        <p class="prc__content__article">Sign up online or in our app for free. All you need is an email address, or a Google or Facebook account.</p>
+                    </div>
+                </div>
+                <div class="prc__content sm-x:col-12 lg:col-8 mb12">
+                    <div class="prc__content__img-box"><img src="./img/下載.svg" alt=""></div>
+                    <div class="prc__content-txt sm-x:t-cn">
+                        <h2 class="prc__content__title">Register for free.</h2>
+                        <p class="prc__content__article">Sign up online or in our app for free. All you need is an email address, or a Google or Facebook account.</p>
+                    </div>
+                </div>
+                <div class="prc__content sm-x:col-12 lg:col-8 mb12">
+                    <div class="prc__content__img-box"><img src="./img/下載.svg" alt=""></div>
+                    <div class="prc__content-txt sm-x:t-cn">
+                        <h2 class="prc__content__title">Register for free.</h2>
+                        <p class="prc__content__article">Sign up online or in our app for free. All you need is an email address, or a Google or Facebook account.</p>
+                    </div>
+                </div>
+                <div class="prc__content sm-x:col-12 lg:col-8 mb12">
+                    <div class="prc__content__img-box"><img src="./img/下載.svg" alt=""></div>
+                    <div class="prc__content-txt sm-x:t-cn">
+                        <h2 class="prc__content__title">Register for free.</h2>
+                        <p class="prc__content__article">Sign up online or in our app for free. All you need is an email address, or a Google or Facebook account.</p>
+                    </div>
+                </div>
+                <div class="prc__content sm-x:col-12 lg:col-8 mb12">
+                    <div class="prc__content__img-box"><img src="./img/下載.svg" alt=""></div>
+                    <div class="prc__content-txt sm-x:t-cn">
+                        <h2 class="prc__content__title">Register for free.</h2>
+                        <p class="prc__content__article">Sign up online or in our app for free. All you need is an email address, or a Google or Facebook account.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="grid-wrapper">
+         <div class="grid-container">
+         </div>
+    </div> -->
+    <!-- <div class="grid-wrapper sm:grid-wrapper lg:grid-wrapper xl:grid-wrapper">
+        <div class="grid-container">
+            <div class="item col-24"></div>
+            <div class="item col-12"></div>
+            <div class="item col-12"></div>
+            <div class="item col-8"></div>
+            <div class="item col-8"></div>
+            <div class="item col-8"></div>
+            <div class="item col-6"></div>
+            <div class="item col-6"></div>
+            <div class="item col-6"></div>
+            <div class="item col-6"></div>
+            <div class="item col-4"></div>
+            <div class="item col-4"></div>
+            <div class="item col-4"></div>
+            <div class="item col-4"></div>
+            <div class="item col-4"></div>
+            <div class="item col-4"></div>
+            <div class="item col-3"></div>
+            <div class="item col-3"></div>
+            <div class="item col-3"></div>
+            <div class="item col-3"></div>
+            <div class="item col-3"></div>
+            <div class="item col-3"></div>
+            <div class="item col-3"></div>
+            <div class="item col-3"></div>
+        </div>
+    </div> -->
+    <!-- <div class="box-out">
+        <div class="box">
+            <div class="box-in">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempora molestiae quia expedita dolores. Cupiditate unde voluptates qui quos voluptas praesentium blanditiis possimus esse quam consectetur sit, culpa tempora asperiores.</p>
+            </div>
+            <div class="box-in">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempora molestiae quia expedita dolores. Cupiditate unde voluptates qui quos voluptas praesentium blanditiis possimus esse quam consectetur sit, culpa tempora asperiores.</p>
+            </div>
+            <div class="box-in">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempora molestiae quia expedita dolores. Cupiditate unde voluptates qui quos voluptas praesentium blanditiis possimus esse quam consectetur sit, culpa tempora asperiores.</p>
+            </div>
+        </div>
+    </div>
+    <div class="box-out">
+        <div class="box-2">
+            <div class="box-in">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempora molestiae quia expedita dolores. Cupiditate unde voluptates qui quos voluptas praesentium blanditiis possimus esse quam consectetur sit, culpa tempora asperiores.</p>
+            </div>
+            <div class="box-in">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempora molestiae quia expedita dolores. Cupiditate unde voluptates qui quos voluptas praesentium blanditiis possimus esse quam consectetur sit, culpa tempora asperiores.</p>
+            </div>
+            <div class="box-in">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempora molestiae quia expedita dolores. Cupiditate unde voluptates qui quos voluptas praesentium blanditiis possimus esse quam consectetur sit, culpa tempora asperiores.</p>
+            </div>
+        </div>
+    </div> -->
     <!-- <a href="javascript:;" class="btn btn--ani">btn-test</a> -->
     <!-- <div class="box zebra-line"></div> -->
     <!-- <a href="javascript:;" class="ball ring">
@@ -67,44 +205,6 @@
         <span class="ring__ball-1"></span>
         <span class="ring__ball-2"></span>
     </div> -->
-    <!-- <div class="wrapper">
-        <div class="container"> 
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1 md:col-3"></div>
-            <div class="item col-1 md:col-3"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-            <div class="item col-1"></div>
-        </div>
-    </div> -->
-
-    <!-- <div class="wrapper">
-        <div class="container">
-            <div class="item col-8 md:col-4"></div>
-            <div class="item col-8 md:col-4"></div>
-            <div class="item col-8 md:col-4"></div>
-            <div class="item col-8 md:col-4"></div>
-            <div class="item col-8 md:col-4"></div>
-            <div class="item col-8 md:col-4"></div>
-        </div>
-    </div> -->
+    <script src="./source/prc.js"></script>
 </body>
 </html>
