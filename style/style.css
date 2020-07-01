@@ -258,31 +258,33 @@ img {
 .grid-wrapper {
   max-width: 90%;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  box-shadow: 0 0 0 1px #000; }
 
 @media screen and (min-width: 480px) {
   .sm\:gw480 {
-    max-width: calc(480px + 0px + 24px); } }
+    max-width: calc(480px + 0px  + 24px); } }
 
 @media screen and (min-width: 768px) {
   .md\:gw600 {
-    max-width: calc(600px + 0px + 24px); }
+    max-width: calc(600px + 0px  + 24px); }
   .md\:gw768 {
-    max-width: calc(768px + 0px + 24px); } }
+    max-width: calc(768px + 0px  + 24px); } }
 
 @media screen and (min-width: 960px) {
   .lg\:gw768 {
-    max-width: calc(768px + 0px + 24px); }
+    max-width: calc(768px + 0px  + 24px); }
   .lg\:gw960 {
-    max-width: calc(960px + 0px + 24px); } }
+    max-width: calc(960px + 0px  + 24px); } }
 
 @media screen and (min-width: 1440px) {
   .xl\:gw960 {
-    max-width: calc(960px + 0px + 24px); }
+    max-width: calc(960px + 0px  + 24px); }
   .xl\:gw1440 {
-    max-width: calc(1440px + 0px + 24px); } }
+    max-width: calc(1440px + 0px  + 24px); } }
 
 .grid-container {
+  background: #cd0000;
   margin-left: 0px;
   margin-right: 0px; }
   .grid-container::after {
