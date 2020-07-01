@@ -1,0 +1,76 @@
+.prc {
+    background-color: rgba(#00aaaa,.3);
+    padding: nth($p,6) 0;
+
+    &__title {
+        @include font(4,0,4);
+        padding: 0 nth($p,3);
+    }
+
+    &__content {
+        box-shadow: 0 0 0 1px $color-black;
+        background-color: $color-white;
+        border-radius: nth($border-radius,1);
+
+        &__img-box {
+            display: none;
+            > img {
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        &-txt {
+            margin: 0 nth($m,6);
+        }
+
+        &__title {
+            position: relative;
+            @include font(3,0);
+            padding: nth($p,2) 0;
+            &::after {
+                content: '';
+                @extend %ab-fill;
+                background: transparent;
+                left: -#{nth($m,6)}; right: -#{nth($m,6)};
+            }
+        }
+
+        &__article {
+            @include font(2,.3rem);
+            max-height: 0;
+            overflow: hidden;
+            transition: all .3s;
+
+            &.open {
+                max-height: 65px;
+                padding-bottom: nth($p,2);
+            }
+        }
+    }
+
+    @include respond-above(600px) {
+        padding-bottom: 0;
+
+        &__content {
+            margin-bottom: nth($m,6);
+
+            &__img-box {
+                display: block;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+
+            &__article {
+                max-height: none;
+                padding-bottom: nth($p,2);
+
+                &.open {
+                    max-height: none;
+                }
+            }
+        }
+    }
+    
+
+}
