@@ -9,6 +9,7 @@ $breakpoints: (
 );
 
 // grid-sys
+$separate: false;
 $wrapper-width: (
     xs: 90%,
     sm : 480,
@@ -18,8 +19,7 @@ $wrapper-width: (
 );
 $columns: 24;
 $gutter: 24px;
-$container-gutter: 0px;
-$xs-wrapper: 95%;
+$container-gutter: 30px;
 
 $font-size: 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem;
 $font-weight: 400 500 700 900;

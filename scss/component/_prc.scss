@@ -50,6 +50,7 @@
     }
 
     @include respond-above(600px) {
+        padding-bottom: 0;
 
         &__content {
             margin-bottom: nth($m,6);

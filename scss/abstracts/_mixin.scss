@@ -106,10 +106,16 @@
     }
 }
 
-@mixin grid-wrapper($max-width,$con-gutter:$container-gutter,$col-gutter:$gutter) {
+// @mixin grid-wrapper($max-width,$con-gutter:$container-gutter,$col-gutter:$gutter) {
+//     max-width: calc(#{$max-width} + #{$con-gutter}  + #{$col-gutter});
+//     // max-width: $max-width;
+// }
+@mixin grid-wrapper($max-width,$col-gutter:$gutter) {
+    max-width: calc(#{$max-width} + #{$col-gutter});
+}
+
+@mixin grid-container($max-width,$con-gutter:$container-gutter,$col-gutter:$gutter) {
     max-width: calc(#{$max-width} + #{$con-gutter}  + #{$col-gutter});
-    // margin-left: auto;
-    // margin-right: auto;
 }
 
 // bk
