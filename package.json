@@ -7,7 +7,10 @@
     "test:css": "node-sass scss/main.scss style/style.css -w",
     "compile:u" : "node-sass scss/utility.scss style/utility.css",
     "compress:u": "node-sass scss/utility.scss style/utility.min.css --output-style compressed",
-    "build:u" : "npm run compile:u && npm run compress:u"
+    "build:u" : "npm run compile:u && npm run compress:u",
+    "compile:grid" : "node-sass scss/grid-sys.scss style/grid-sys.css",
+    "compress:grid": "node-sass scss/grid-sys.scss style/grid-sys.min.css --output-style compressed",
+    "build:grid" : "npm run compile:grid && npm run compress:grid"
   },
   "repository": {
     "type": "git",
