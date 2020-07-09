@@ -4,7 +4,10 @@
   "description": "Hi I am Samura chiu",
   "main": "index.js",
   "scripts": {
-    "test:css": "node-sass scss/main.scss style/style.css -w"
+    "test:css": "node-sass scss/main.scss style/style.css -w",
+    "compile:u" : "node-sass scss/utility.scss style/utility.css",
+    "compress:u": "node-sass scss/utility.scss style/utility.min.css --output-style compressed",
+    "build:u" : "npm run compile:u && npm run compress:u"
   },
   "repository": {
     "type": "git",
