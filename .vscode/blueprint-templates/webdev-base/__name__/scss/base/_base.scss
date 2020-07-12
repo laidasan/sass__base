@@ -18,9 +18,14 @@ html {
     }
 }
 
-img {
-    vertical-align: middle;
+.img-box {
+    > img {
+        width: 100%;
+        vertical-align: middle;
+        object-fit: cover;
+    }
 }
+
 
 @include respond('sm') {
     .section {

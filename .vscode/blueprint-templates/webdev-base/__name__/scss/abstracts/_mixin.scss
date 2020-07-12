@@ -66,11 +66,76 @@
     }
 };
 
+@mixin btn-arrow($size:30px) {
+    position: relative;
+    width: $size;
+    height: $size;
+
+    &::before,&::after {
+        content: '';
+        @extend %ab-fill;
+        background-color: $color-black;
+    }
+
+
+    &::before {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 0;
+        padding: 1.5px 0;
+    }
+
+    &::after {
+        background: transparent;
+        width: $size / 2; height: $size / 2;  
+        left: 10px;
+        margin: auto;
+        border-width: 0;
+        border-top: 3px;
+        border-right-width: 3px;
+        border-style: solid;
+        transform: rotateZ(45deg);
+    }
+}
+
+@mixin btn($type,$size:30px) {
+    @if $type == 'arrow' { @include btn-arrow($size) }
+}
+
 // font-size and line-height
 @mixin  font($f-size-level:2,$lh:0,$f-weight-level:1) {
     font-size: nth($font-size , $f-size-level);
     font-weight: nth($font-weight,$f-weight-level);
     line-height: nth($font-size , $f-size-level) + $lh;
+}
+
+// 置中方式
+@mixin align-inb-v {
+    font-size: 0;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 0px;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+@mixin hori-middle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// table
+@mixin table($width,$layout-fixed:false,$border-collpase:true,$hori-middle:true) {
+    width: 100%;
+    max-width: $width;
+    @if $layout-fixed { table-layout: fixed; }
+    @if $hori-middle { 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @if $border-collpase == false { border-collapse: separate; }
 }
 
 // $gutter 帶任何單位都可以 px , rem , em , % etc....
@@ -82,12 +147,19 @@
 // wrapper - 設置 max-width 控制寬度 , 不使用 margin padding , around mode 額外再加 $gutter , 才能夠內容（colmuns)正確寬度
 //  container - 控制邊緣間距 , 這裡不設置寬度 , 只設置 padding , border , margin 
 //   columns
+
 @mixin grid-sys($col-nm,$type:float,$col-gutter:20px,$mode:between) {
     @if $type == flex {
         flex-basis: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
-    }
-    @if $type == float {
-        float: left;
+    } @else {
+        @if $type == float {
+            float: left;
+        }
+        
+        @if $type == inline-block {
+            display: inline-block;
+        }  
+
         @if $mode == between {
             margin-right: $col-gutter;
             width: calc((100% - #{($col-nm - 1)} * #{$col-gutter}) / #{$col-nm});
@@ -106,6 +178,31 @@
     }
 }
 
+// @mixin grid-sys($col-nm,$type:float,$col-gutter:20px,$mode:between) {
+//     @if $type == flex {
+//         flex-basis: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
+//     }
+//     @if $type == float {
+//         float: left;
+//         @if $mode == between {
+//             margin-right: $col-gutter;
+//             width: calc((100% - #{($col-nm - 1)} * #{$col-gutter}) / #{$col-nm});
+//             &:nth-child(#{$col-nm}n) { margin-right: 0;}
+//         };
+//         @if $mode == around {
+//             margin-left: $col-gutter / 2;
+//             margin-right: $col-gutter / 2;
+//             width: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
+//         }
+//         @if $mode == even {
+//             margin-right: $col-gutter;
+//             width: calc((100% - #{($col-nm + 1)} * #{$col-gutter}) / #{$col-nm});
+//             &:nth-child(#{$col-nm}n + 1) { margin-left: $col-gutter;}
+//         };
+//     }
+// }
+
+
 // @mixin grid-wrapper($max-width,$con-gutter:$container-gutter,$col-gutter:$gutter) {
 //     max-width: calc(#{$max-width} + #{$con-gutter}  + #{$col-gutter});
 //     // max-width: $max-width;
@@ -114,9 +211,11 @@
     max-width: calc(#{$max-width} + #{$col-gutter});
 }
 
+
 @mixin grid-container($max-width,$con-gutter:$container-gutter,$col-gutter:$gutter) {
-    max-width: calc(#{$max-width} + #{$con-gutter}  + #{$col-gutter});
+    max-width: calc(#{$max-width} + #{$col-gutter} - #{$con-gutter});
 }
+
 
 // bk
 // zebra , @include zebra( mode(number) )
@@ -198,11 +297,6 @@
         @include menu-hum();
     }
 }
-
-// .menu {
-//     @include menu(0);
-//     width: 3rem;
-// }
 
 
 
