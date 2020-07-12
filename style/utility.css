@@ -498,3 +498,8 @@
 
 .maxw1440 {
   max-width: 1440px; }
+
+.clear::after {
+  content: '';
+  display: block;
+  clear: both; }

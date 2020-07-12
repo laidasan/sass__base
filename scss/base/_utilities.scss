@@ -101,3 +101,14 @@
         max-width: #{nth($u-width,$i + 1)}px;
     }
 }
+
+// clear
+.clear {
+    @include clear;
+}
+
+// hori-middle
+.hori-middle {
+    margin-left: auto;
+    margin-right: auto;
+}
