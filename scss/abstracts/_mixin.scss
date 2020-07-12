@@ -121,6 +121,23 @@
     }
 }
 
+@mixin hori-middle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// table
+@mixin table($width,$layout-fixed:false,$border-collpase:true,$hori-middle:true) {
+    width: 100%;
+    max-width: $width;
+    @if $layout-fixed { table-layout: fixed; }
+    @if $hori-middle { 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @if $border-collpase == false { border-collapse: separate; }
+}
+
 // $gutter 帶任何單位都可以 px , rem , em , % etc....
 // 一個 container 裡面一次只能使用一種 mode （不能混用）
 // 但因為 { between（兩端貼邊） , even（間距相同） } 這兩種模式都需要準確的選頭或是尾來增減間距
