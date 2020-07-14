@@ -1,5 +1,11 @@
 .btn {
-    @include btn-base(false);
+    &-a {
+        @include btn-base(false);
+    }
+    
+    &-button {
+        @include btn-base-button(false);
+    }
 
     &--sign {
         @include link {
