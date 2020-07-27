@@ -1,0 +1,9 @@
+{
+	"Google Font Roboto": {
+		"prefix": "roboto",
+		"body": [
+		  "font-family: 'Roboto', sans-serif;"
+		],
+		"description": "Google Font Roboto"
+	}
+}
