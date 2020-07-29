@@ -106,6 +106,42 @@
     }
 }
 
+@mixin btn-direct($size:21px,$weight:3px) {
+    position: absolute;
+    top: 0;bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: $size; height: $size;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; top: 0; bottom: 0;
+        border-width: 0;
+        border-style: solid;
+        border-top-width: $weight;
+    }
+
+    &.next {
+        right: 15px;
+        transform: rotateZ(45deg);
+
+        &::after {
+            border-right-width: $weight;
+        }
+    }
+
+    &.prev {
+        left: 15px;
+        transform: rotateZ(-45deg);
+
+        &::after {
+            border-left-width: $weight;
+        }
+    }
+}
+
 @mixin btn($type,$size:30px) {
     @if $type == 'arrow' { @include btn-arrow($size) }
 }
