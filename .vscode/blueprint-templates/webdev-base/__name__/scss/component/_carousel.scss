@@ -202,27 +202,12 @@
 
         // points
         &__points {
-            // position: absolute;
-            // left: 0; right: 0;
-            // bottom: 30px;
-            // font-size: 0;
-            // text-align: center;
+            @include carouselControlPoints
 
             // > li {
-            //     display: inline-block;
-            //     width: 12px;
-            //     height: 12px;
-            //     background-color: #fff;
-            //     border-radius: 50%;
-            //     margin-left: 6px;
-            //     margin-right: 6px;
-            //     cursor: pointer;
-                
             //     &.active {
-            //         background-color: #E8BE02;
             //     }
             // }
-            @include carouselControlPoints
         }
 
         // arrow 
@@ -234,63 +219,22 @@
         // timer bar
         &__timer {
             @include carouselControlTimer();
-    //         position: absolute;
-    //         left: 0; right: 0;
-    //         bottom: 0;
-    //         background-color: $timerContainerBk;
-
     //         &-list {
-    //             display: flex;
-    //             justify-content: center;
-    //             align-items: center;
 
     //             > li {
-    //                 position: relative;
-    //                 flex-basis: 25%;
-    //                 height: $timerMobileHeight;
-    //                 margin-left: nth($m,1);
-    //                 margin-right: nth($m,1);
-
-    //                 // transition
-    //                 transition: transform .6s;
-
+        
     //                 // when timer running
     //                 &.active {
-    //                     transform: scaleY(1.75);
 
-    //                     &::before {
-    //                         background-color: $timerActiveBk;
-    //                     }
+    //                     &::before { }
 
-    //                     > .bar {
-    //                         width: 100%;
-    //                         visibility: visible;
-    //                     }
+    //                     > .bar { }
+
     //                 }
 
-    //                 &::before {
-    //                     content: '';
-    //                     position: absolute;
-    //                     left: 0; right: 0;
-    //                     top: $timerBarHeight; bottom: $timerBarHeight;
-    //                     background-color: $timerBaseBk;
-    //                 }
+    //                 &::before { }
 
-    //                 > .bar {
-    //                     position: absolute;
-    //                     left: 0;
-
-    //                     // setting width to run timer bar
-    //                     width: 0;
-    //                     visibility: hidden;
-
-    //                     top: $timerBarHeight; bottom: $timerBarHeight;
-    //                     background-color: $timerActive;
-    //                     overflow: hidden;
-
-    //                     // transition 
-    //                     transition: width $timerRunTime linear;
-    //                 }
+    //                 > .bar { }
     //             }
     //         }
         }
