@@ -381,6 +381,8 @@
     width: $width;
 
     @if $pseudo {
+        height: $h;
+        background-color: #000;
 
         &::after , &::before {
             content: '';
@@ -393,11 +395,11 @@
         }
 
         &::before {
-            top: 3px;
+            top: 6px;
         }
 
         &::after {
-            bottom: 3px;
+            bottom: 6px;
         }
 
     } @else {
