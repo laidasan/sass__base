@@ -229,7 +229,7 @@
 //  container - 控制邊緣間距 , 這裡不設置寬度 , 只設置 padding , border , margin 
 //   columns
 
-@mixin grid-sys($col-nm,$type:float,$col-gutter:20px,$mode:between) {
+@mixin grid-sys-single($col-nm,$type:float,$col-gutter:20px,$mode:between) {
     @if $type == flex {
         flex-basis: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
     } @else {
@@ -259,35 +259,24 @@
     }
 }
 
-// @mixin grid-sys($col-nm,$type:float,$col-gutter:20px,$mode:between) {
-//     @if $type == flex {
-//         flex-basis: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
-//     }
-//     @if $type == float {
-//         float: left;
-//         @if $mode == between {
-//             margin-right: $col-gutter;
-//             width: calc((100% - #{($col-nm - 1)} * #{$col-gutter}) / #{$col-nm});
-//             &:nth-child(#{$col-nm}n) { margin-right: 0;}
-//         };
-//         @if $mode == around {
-//             margin-left: $col-gutter / 2;
-//             margin-right: $col-gutter / 2;
-//             width: calc((100% - #{$col-nm} * #{$col-gutter}) / #{$col-nm});
-//         }
-//         @if $mode == even {
-//             margin-right: $col-gutter;
-//             width: calc((100% - #{($col-nm + 1)} * #{$col-gutter}) / #{$col-nm});
-//             &:nth-child(#{$col-nm}n + 1) { margin-left: $col-gutter;}
-//         };
-//     }
-// }
+@mixin grid-sys-all($col-nm,$type:float,$col-gutter:20px) {
+    @if $type == flex {
+        flex-basis: calc((100% - ( #{$columns} / #{$col-nm} * #{$col-gutter}) ) / #{$columns} * #{$col-nm});
+    } @else {
+        @if $type == float {
+            float: left;
+        }
+        
+        @if $type == inline-block {
+            display: inline-block;
+        } 
 
+        margin-left: $col-gutter / 2;
+        margin-right: $col-gutter / 2;
+        width: calc((100% - ( #{$columns} / #{$col-nm} * #{$col-gutter}) ) / #{$columns} * #{$col-nm});
+    }
+}
 
-// @mixin grid-wrapper($max-width,$con-gutter:$container-gutter,$col-gutter:$gutter) {
-//     max-width: calc(#{$max-width} + #{$con-gutter}  + #{$col-gutter});
-//     // max-width: $max-width;
-// }
 @mixin grid-wrapper($max-width,$col-gutter:$gutter) {
     max-width: calc(#{$max-width} + #{$col-gutter});
 }
