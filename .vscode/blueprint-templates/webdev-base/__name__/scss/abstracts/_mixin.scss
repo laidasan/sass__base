@@ -372,6 +372,7 @@
     @if $pseudo {
         height: $h;
         background-color: #000;
+        position: relative;
 
         &::after , &::before {
             content: '';
