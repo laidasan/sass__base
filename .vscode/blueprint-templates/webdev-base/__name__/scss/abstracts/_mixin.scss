@@ -30,6 +30,15 @@
     }
 };
 
+
+@mixin base-link($color:#333) {
+    @include link {
+        text-decoration: none;
+        color: $color;
+    }
+}
+
+
 // about position
 @mixin ab-fill-ct {
     position: absolute; 
