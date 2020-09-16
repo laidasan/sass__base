@@ -4,7 +4,14 @@
     }
     
     &-button {
-        @include btn-base-button(false);
+        @include btn-base-button(true);
+    }
+    
+    &-text-float-up {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        @include text-float-up(btn);
     }
 
     &--sign {

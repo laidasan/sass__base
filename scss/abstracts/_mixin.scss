@@ -186,6 +186,12 @@
     
 }
 
+@mixin btn-ghost($color,$border-color) {
+    color: $color;
+    $border-color: $border-color;
+    background-color: transparent;
+}
+
 @mixin btn($type,$size:30px) {
     @if $type == 'arrow' { @include btn-arrow($size) }
 }
@@ -663,6 +669,45 @@
     @if get-mode($btn-ani,$mode) == flyin {
         @include btn-flyin($ani-type);
     }
+}
+
+// text
+@mixin text-float-up($text:'start') {
+
+    > .btn-text {
+        display: block;
+        transition: transform .75s .1s cubic-bezier(0.19, 1, 0.22, 1),
+                    opacity .75s .1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        &::after {
+            content: '#{$text}';
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(35%);
+            transition: transform .24s ease-out,
+                        opacity .24s ease-out;
+        }
+
+        &:hover {
+            > .btn-text {
+                opacity: 0;
+                transform: translateY(-25%);
+                transition: transform .24s ease-out,
+                            opacity .24s ease-out;
+            }
+
+            &::after {
+                opacity: 1;
+                transform: translateY(0);
+                transition: transform .75s .1s cubic-bezier(0.19, 1, 0.22, 1),
+                            opacity .75s .1s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+        }
 }
 
 // 06/29 待整理
