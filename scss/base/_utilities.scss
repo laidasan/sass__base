@@ -1,94 +1,281 @@
 // margin
-// margin bottom
-@for $var from 0 through length($m) - 1 {
-    .mb#{6 + 3 * $var} {
-        margin-bottom: nth($m,$var + 1);
+@for $var from 0 through 13 {
+    // 正數
+    .mb-#{$var} {
+        margin-bottom: #{ 3 * $var }px;
+    }
+
+    .mt-#{$var} {
+        margin-top: #{ 3 * $var }px;
+    }
+
+    .mr-#{$var} {
+        margin-right: #{ 3 * $var }px;
+    }
+
+    .ml-#{$var} {
+        margin-left: #{ 3 * $var }px;
+    }
+
+    .mx-#{$var} {
+        margin-left: #{ 3 * $var }px;
+        margin-right: #{ 3 * $var }px;
+    }
+
+    .my-#{$var} {
+        margin-top: #{ 3 * $var }px;
+        margin-bottom: #{ 3 * $var }px;
+    }
+
+    // 負數
+    .mb-n#{$var} {
+        margin-bottom: -#{ 3 * $var }px;
+    }
+
+    .mt-n#{$var} {
+        margin-top: -#{ 3 * $var }px;
+    }
+
+    .mr-n#{$var} {
+        margin-right: -#{ 3 * $var }px;
+    }
+
+    .ml-n#{$var} {
+        margin-left: -#{ 3 * $var }px;
+    }
+
+    .mx-n#{$var} {
+        margin-left: -#{ 3 * $var }px;
+        margin-right: -#{ 3 * $var }px;
+    }
+
+    .my-n#{$var} {
+        margin-top: -#{ 3 * $var }px;
+        margin-bottom: -#{ 3 * $var }px;
+    }
+
+}
+
+
+// margin response
+@each $key,$value in $breakpoints {
+  @for $var from 0 through 13 {
+    @include respond($key) {
+        // 正數
+        .#{$key}\:mb-#{$var} {
+            margin-bottom: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:mt-#{$var} {
+            margin-top: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:mr-#{$var} {
+            margin-right: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:ml-#{$var} {
+            margin-left: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:mx-#{$var} {
+            margin-left: #{ 3 * $var }px;
+            margin-right: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:my-#{$var} {
+            margin-top: #{ 3 * $var }px;
+            margin-bottom: #{ 3 * $var }px;
+        }
+
+        // 負數
+        .#{$key}\:mb-n#{$var} {
+            margin-bottom: -#{ 3 * $var }px;
+        }
+    
+        .#{$key}\:mt-n#{$var} {
+            margin-top: -#{ 3 * $var }px;
+        }
+    
+        .#{$key}\:mr-n#{$var} {
+            margin-right: -#{ 3 * $var }px;
+        }
+    
+        .#{$key}\:ml-n#{$var} {
+            margin-left: -#{ 3 * $var }px;
+        }
+    
+        .#{$key}\:mx-n#{$var} {
+            margin-left: -#{ 3 * $var }px;
+            margin-right: -#{ 3 * $var }px;
+        }
+    
+        .#{$key}\:my-n#{$var} {
+            margin-top: -#{ 3 * $var }px;
+            margin-bottom: -#{ 3 * $var }px;
+        }
+    }
+  }
+}
+
+.m {
+    &t-auto {
+        margin-top: auto;
+    }
+
+    &b-auto {
+        margin-bottom: auto;
+    }
+    
+    &l-auto {
+        margin-left: auto;
+    }
+    
+    &r-auto {
+        margin-right: auto;
+    }
+
+    &x-auto {
+      margin-right: auto;
+      margin-left: auto;
     }
 }
 
 @each $key,$value in $breakpoints {
-    @include respond($key) {
-        @for $var from 0 through length($m) - 1 {
-            .#{$key}\:mb#{6 + 3 * $var} {
-                margin-bottom: nth($m,$var + 1);
-            }
+  @include respond($key) {
+        .#{$key}\:mt-auto {
+            margin-top: auto;
+        }
+
+        .#{$key}\:mb-auto {
+            margin-bottom: auto;
+        }
+
+        .#{$key}\:mr-auto {
+            margin-right: auto;
+        }
+
+        .#{$key}\:ml-auto {
+            margin-left: auto;
+        }
+
+        .#{$key}\:mx-auto {
+          margin-right: auto;
+          margin-left: auto;
+        }
+  }
+}
+
+
+// padding
+@for $var from 0 through 13 {
+    .pb-#{$var} {
+        padding-bottom: #{ 3 * $var }px;
+    }
+
+    .pt-#{$var} {
+        padding-top: #{ 3 * $var }px;
+    }
+    
+    .pr-#{$var} {
+        padding-right: #{ 3 * $var }px;
+    }
+
+    .pl-#{$var} {
+        padding-left: #{ 3 * $var }px;
+    }
+
+    .px-#{$var} {
+        padding-left: #{ 3 * $var }px;
+        padding-right: #{3 * $var }px;
+    }
+
+    .py-#{$var} {
+        padding-top: #{ 3 * $var }px;
+        padding-bottom: #{3 * $var }px;
+    }
+    
+}
+
+@each $key,$value in $breakpoints {
+    @for $var from 0 through 13 {
+      @include respond($key) {
+        .#{$key}\:pb-#{$var} {
+            padding-bottom: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:pt-#{$var} {
+            padding-top: #{ 3 * $var }px;
         }
         
+        .#{$key}\:pr-#{$var} {
+            padding-right: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:pl-#{$var} {
+            padding-left: #{ 3 * $var }px;
+        }
+    
+        .#{$key}\:px-#{$var} {
+            padding-left: #{ 3 * $var }px;
+            padding-right: #{3 * $var }px;
+        }
+    
+        .#{$key}\:py-#{$var} {
+            padding-top: #{ 3 * $var }px;
+            padding-bottom: #{3 * $var }px;
+        }
+      }
     }
 }
 
-// margin top
-@for $var from 0 through length($m) - 1 {
-    .mt#{6 + 3 * $var} {
-        margin-top: nth($m,$var + 1);
+
+// float
+@each $key, $value in $float {
+  .float-#{$key} {
+    float: $value;
+  }
+}
+
+@include renderRwd($float,'float','float');
+
+// clearfix
+.clearfix {
+  &::after {
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+// display
+@each $key, $value in $display {
+  .#{$key} {
+    display: $value;
+  }
+}
+
+@each $BreakPointKey,$BreakPointValue in $breakpoints {
+  @include respond($BreakPointKey) {
+    @each $displayKey,$displayValue in $display {
+      .#{$BreakPointKey}\:#{$displayKey} {
+        display: #{$displayValue}
+      }
     }
+  }  
 }
 
 
 
 // text-align
-.t {
-
-    &-cn {
-        text-align: center;
-    }
-
-    &-l {
-        text-align: left;
-    }
-    
-    &-r {
-        text-align: right;
-    }
+@each $key,$value in $text-align {
+  .text-#{$key} {
+    text-align: $value
+  }
 }
 
+@include renderRwd($text-align,'text','text-align');
 
-@each $key,$value in $breakpoints {
-    @include respond($key) {
-        .#{$key}\:t {
-            &-cn {text-align: center;}
-            &-l {text-align: left;}
-            &-r {text-align: right;}
-        }
-    }
-}
-
-
-// display
-
-.d-non {
-    display: none;
-}
-.d-b {
-    display: block;
-}
-.d-inb {
-    display: inline-block;
-}
-.d-flex {
-    display: flex;
-}
-.d-grid {
-    display: grid;
-}
-
-@each $key , $value in $breakpoints {
-    @include respond($key) {
-        .#{$key}\:d {
-            &-non { display: none; }
-
-            &-b { display: block; }
-
-            &-in { display: inline; }
-
-            &-inb { display: inline-block; }
-
-            &-flex { display: flex; }
-
-            &-grid { display: grid }
-        }
-    }
-}
 
 // float
 .fl {
@@ -107,25 +294,519 @@
     }
 }
 
-
-// base-width
-.maxw90\% {
-    max-width: 90%;
-}
-
-@for $i from 0 through length($u-width) - 1 {
-    .maxw#{nth($u-width,$i + 1)} {
-        max-width: #{nth($u-width,$i + 1)}px;
-    }
-}
-
 // clear
 .clear {
     @include clear;
 }
 
-// hori-middle
-.hori-middle {
-    margin-left: auto;
-    margin-right: auto;
+// width 
+@each $key, $value in $width {
+  .w-#{$key} {
+    width: $value;
+  }
+}
+
+@include renderRwd($width,'w','width');
+
+
+// width attrs
+@each $key, $value in $width-attr {
+  .width-#{$key} {
+    width: $value
+  }
+}
+
+// max-width
+@each $key, $value in $max-width {
+  .max-w-#{$key} {
+    max-width: $value;
+  }
+}
+
+@include renderRwd($max-width,'max-w','max-width');
+
+
+
+// height 
+@each $key, $value in $height {
+  .h-#{$key} {
+    height: $value;
+  }
+}
+
+@include renderRwd($height,'h','height');
+
+
+// border-width 
+@each $key, $value in $border-width {
+  .border {
+    &-#{$key} {
+      border-width: $value;
+    }
+
+    &-t-#{$key} {
+      border-top-width: $value;
+    }
+
+    &-l-#{$key} {
+      border-top-width: $value;
+    }
+
+    &-b-#{$key} {
+      border-top-width: $value;
+    }
+
+    &-r-#{$key} {
+      border-top-width: $value;
+    }
+
+    &-t-#{$key} {
+      border-top-width: $value;
+    }
+  }
+}
+
+// border-radius
+@each $roundedKey,$roundedValue in $border-radius {
+    .rounded-#{$roundedKey} {
+        border-radius: $roundedValue;
+    }
+    
+    .rounded-t-#{$roundedKey} {
+        border-top-left-radius: $roundedValue;
+        border-top-right-radius: $roundedValue;
+    }
+
+    .rounded-b-#{$roundedKey} {
+        border-bottom-left-radius: $roundedValue;
+        border-bottom-right-radius: $roundedValue;
+    }
+
+    .rounded-r-#{$roundedKey} {
+        border-top-right-radius: $roundedValue;
+        border-bottom-right-radius: $roundedValue;
+    }
+
+    .rounded-l-#{$roundedKey} {
+        border-top-left-radius: $roundedValue;
+        border-bottom-left-radius: $roundedValue;
+    }
+}
+
+@each $BreakPointKey,$BreakPointValue in $breakpoints {
+  @include respond($BreakPointKey) {
+    @each $roundedKey,$roundedValue in $border-radius {
+      .#{$BreakPointKey}\:rounded-#{$roundedKey} {
+          border-radius: $roundedValue;
+      }
+
+      .#{$BreakPointKey}\:rounded-t-#{$roundedKey} {
+          border-top-left-radius: $roundedValue;
+          border-top-right-radius: $roundedValue;
+      }
+  
+      .#{$BreakPointKey}\:rounded-b-#{$roundedKey} {
+          border-bottom-left-radius: $roundedValue;
+          border-bottom-right-radius: $roundedValue;
+      }
+  
+      .#{$BreakPointKey}\:rounded-r-#{$roundedKey} {
+          border-top-right-radius: $roundedValue;
+          border-bottom-right-radius: $roundedValue;
+      }
+  
+      .#{$BreakPointKey}\:rounded-l-#{$roundedKey} {
+          border-top-left-radius: $roundedValue;
+          border-bottom-left-radius: $roundedValue;
+      }
+    }
+  }  
+}
+
+
+// position 
+.position {
+    &-relative {
+        position: relative;
+    }
+
+    &-absolute {
+        position: absolute;
+    }
+
+    &-static {
+        position: static;
+    }
+
+    &-fixed {
+        position: fixed;
+    }
+}
+
+@each $key,$value in $breakpoints {
+    @include respond($key) {
+        .#{$key}\:position {
+            &-relative {
+                position: relative;
+            }
+        
+            &-absolute {
+                position: absolute;
+            }
+        
+            &-static {
+                position: static;
+            }
+        
+            &-fixed {
+                position: fixed;
+            }
+        }
+    }
+}
+
+// left
+// right 
+// top 
+// bottom
+.left {
+  &-0 {
+    left: 0;
+  }
+
+  &-auto {
+    left: auto;
+  }
+}
+
+.right {
+  &-0 {
+    right: 0;
+  }
+
+  &-auto {
+    right: auto;
+  }
+}
+
+.top {
+  &-0 {
+    top: 0;
+  }
+
+  &-auto {
+    top: auto;
+  }
+}
+
+.bottom {
+  &-0 {
+    bottom: 0;
+  }
+
+  &-auto {
+    bottom: auto;
+  }
+}
+
+
+
+@each $key,$value in $breakpoints {
+  @include respond($key) {
+    .#{$key}\:left {
+      &-0 {
+        left: 0;
+      }
+
+      &-auto {
+        left: auto;
+      }
+    }
+    
+    .#{$key}\:right {
+      &-0 {
+        right: 0;
+      }
+
+      &-auto {
+        right: auto;
+      }
+    }
+    
+    .#{$key}\:top {
+      &-0 {
+        top: 0;
+      }
+
+      &-auto {
+        top: auto;
+      }
+    }
+    
+    .#{$key}\:bottom {
+      &-0 {
+        bottom: 0;
+      }
+
+      &-auto {
+        bottom: auto;
+      }
+    }
+  }
+}
+
+
+// typography
+
+// fontSize
+@each $key,$value in $font-size {
+  .text-#{$key} {
+    font-size: $value;
+  }
+}
+
+@include renderRwd($font-size,'text','font-size');
+
+// fontWeight
+@each $key,$value in $font-weight {
+  .font-#{$key} {
+    font-weight: $value;
+  }
+}
+
+@include renderRwd($font-weight,'font','font-weight');
+
+
+
+// line-height 
+@each $key,$value in $line-height {
+  .leading-#{$key} {
+    line-height: $value;
+  }
+}
+
+@include renderRwd($line-height,'leading','line-height');
+
+// vertical align
+@each $key,$value in $vertical-align {
+  .align-#{$key} {
+    vertical-align: $value;
+  }
+}
+
+@include renderRwd($vertical-align,'align','vertical-align');
+
+
+
+@each $key,$value in $white-space {
+  .whitespace-#{$key} {
+    white-space: $value;
+  }
+}
+
+@include renderRwd($white-space,'whitespace','white-space');
+
+
+// text-decoration 
+@each $key, $value in $text-decoration {
+  .#{$key} {
+    text-decoration: $value;
+  }
+}
+
+
+
+// cursor
+@each $key, $value in $cursor {
+  .cursor-#{$key} {
+    cursor: $value
+  }
+}
+
+
+// flex 
+// justify-content
+@each $key,$value in $flex-justify {
+  .#{$key} {
+    justify-content: $value;
+  }
+}
+
+
+@each $breakPointKey ,$breakPointValue in $breakpoints {
+  @include respond($breakPointKey) {
+    @each $key,$value in $flex-justify {
+      .#{$breakPointKey}\:#{$key} {
+        justify-content: $value;
+      }
+    }
+  }
+}
+
+// align-center 
+@each $key,$value in $flex-align-items {
+  .#{$key} {
+    align-items: $value;
+  }
+}
+
+
+@each $breakPointKey ,$breakPointValue in $breakpoints {
+  @include respond($breakPointKey) {
+    @each $key,$value in $flex-align-items {
+      .#{$breakPointKey}\:#{$key} {
+        align-items: $value;
+      }
+    }
+  }
+}
+
+// align-self 
+@each $key,$value in $flex-align-self {
+  .#{$key} {
+    align-self: $value;
+  }
+}
+
+
+@each $breakPointKey ,$breakPointValue in $breakpoints {
+  @include respond($breakPointKey) {
+    @each $key,$value in $flex-align-self {
+      .#{$breakPointKey}\:#{$key} {
+        align-self: $value;
+      }
+    }
+  }
+}
+
+// flex-direction
+@each $key,$value in $flex-direction {
+  .#{$key} {
+    flex-direction: $value;
+  }
+}
+
+
+@each $breakPointKey ,$breakPointValue in $breakpoints {
+  @include respond($breakPointKey) {
+    @each $key,$value in $flex-direction {
+      .#{$breakPointKey}\:#{$key} {
+        flex-direction: $value;
+      }
+    }
+  }
+}
+
+// flex-wrap 
+@each $key,$value in $flex-wrap {
+  .#{$key} {
+    flex-wrap: $value;
+  }
+}
+
+@each $breakPointKey ,$breakPointValue in $breakpoints {
+  @include respond($breakPointKey) {
+    @each $key,$value in $flex-wrap {
+      .#{$breakPointKey}\:#{$key} {
+        flex-wrap: $value;
+      }
+    }
+  }
+}
+
+// flex-grow 
+@each $key, $value in $flex-grow {
+  .flex-grow-#{$key} {
+    flex-grow: $value
+  }
+}
+
+@include renderRwd($flex-grow,'flex-grow','flex-grow');
+
+// flex-basis
+$flex-col-gutter: 12px;
+$flex-columns: 24;
+@for $col from 1 through $flex-columns {
+  .flex-col-#{$col}{
+    margin-right: $flex-col-gutter;
+    margin-left: $flex-col-gutter;
+    flex-basis: calc( (100% - ( #{ $flex-columns / $col } * #{$flex-col-gutter * 2} ) ) / #{$flex-columns} * #{$col} )
+  }
+}
+
+@each $key, $value in $breakpoints {
+  @for $col from 1 through $flex-columns {
+    .#{$key}\:flex-col-#{$col}{
+      margin-right: $flex-col-gutter;
+      margin-left: $flex-col-gutter;
+      flex-basis: calc( (100% - ( #{ $flex-columns / $col } * #{$flex-col-gutter * 2} ) ) / #{$flex-columns} * #{$col} )
+    }
+  }
+}
+
+
+// table 
+
+// table-layout
+@each $key, $value in $table-layout {
+  .table-#{$key} {
+    table-layout: $value
+  }
+}
+
+@include renderRwd($table-layout,'table','table-layout');
+
+// border-collapse
+@each $key, $value in $border-collapse {
+  .border-#{$key} {
+    border-collapse: $value
+  }
+}
+
+@include renderRwd($border-collapse,'border','border-collapse');
+
+
+// overflow
+@each $key, $value in $overflow {
+  .overflow-#{$key} {
+    overflow: $value
+  }
+
+  .overflow-x-#{$key} {
+    overflow-x: $value
+  }
+
+  .overflow-y-#{$key} {
+    overflow-y: $value
+  }
+}
+
+@each $breakPointKey ,$breakPointValue in $breakpoints {
+  @include respond($breakPointKey) {
+    @each $key,$value in $overflow {
+      .#{$breakPointKey}\:overflow-#{$key} {
+        overflow: $value;
+      }
+      
+      .#{$breakPointKey}\:overflow-x-#{$key} {
+        overflow-x: $value;
+      }
+
+      .#{$breakPointKey}\:overflow-y-#{$key} {
+        overflow-y: $value;
+      }
+    }
+  }
+}
+
+
+// color
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value
+  }
+
+  .bg-#{key} {
+    background-color: $value
+  }
 }

@@ -1,15 +1,10 @@
-@import "abstracts/animation";
-@import "abstracts/extend";
 @import "abstracts/variable";
 @import "abstracts/function";
+@import "abstracts/extend";
 @import "abstracts/mixin";
+@import "abstracts/animation";
 
 
-@import "base/base";
-@import "base/utilities";
 @import "base/gridsys";
+@import "base/utilities";
 
-// @import "component/ring";
-// @import "component/bounce";
-// @import "component/prc";
-@import "component/btn";

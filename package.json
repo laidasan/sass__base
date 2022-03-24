@@ -5,14 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test:css": "node-sass scss/main.scss style/style.css -w",
-    "compile:u" : "node-sass scss/utility.scss style/utility.css",
-    "compress:u": "node-sass scss/utility.scss style/utility.min.css --output-style compressed",
-    "watch:u": "node-sass scss/utility.scss style/utility.css -w",
-    "build:u" : "npm run compile:u && npm run compress:u",
-    "compile:grid" : "node-sass scss/grid-sys.scss style/grid-sys.css",
-    "compress:grid": "node-sass scss/grid-sys.scss style/grid-sys.min.css --output-style compressed",
-    "watch:grid" : "node-sass scss/grid-sys.scss style/grid-sys.css -w",
-    "build:grid" : "npm run compile:grid && npm run compress:grid"
+    "compile:css": "node-sass scss/main.scss style/main.css",
+    "compress:css": "node-sass scss/main.scss style/main.min.css --output-style compressed"
   },
   "repository": {
     "type": "git",
@@ -26,6 +20,6 @@
   "homepage": "https://github.com/laidasan/104mac-layout-practice#readme",
   "devDependencies": {
     "concat": "^1.0.3",
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.1"
   }
 }

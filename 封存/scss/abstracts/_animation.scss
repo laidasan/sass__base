@@ -20,7 +20,7 @@ $bounce: (
         transform: scale(1.05,.95) translateY(0px);
     }
     57% {
-        transform: scale(1,1) translaateY(map-get(map-get($bounce , transform) , bounce)); // 彈到地面反彈
+        transform: scale(1,1) translateY(map-get(map-get($bounce , transform) , bounce)); // 彈到地面反彈
     }
     64% {
         transform: scale(1,1) translateY(0px);

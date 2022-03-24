@@ -63,8 +63,6 @@
 
 
 // grid-col
-
-// col for float
 @for $col-nm from 1 through $columns {
     .col-#{$col-nm} {
         @include grid-sys-all($col-nm,float,$gutter);

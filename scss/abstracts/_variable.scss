@@ -1,4 +1,4 @@
-// base
+// breakpoints
 $breakpoints: (
     'xs' : 320px,
     'sm' : 480px,
@@ -21,22 +21,268 @@ $columns: 24;
 $gutter: 24px;
 $container-gutter: 0px;
 
+$float: (
+    none: none,
+    left: left,
+    right: right
+);
+
+$display: (
+    block: block,
+    inline-block: inline-block,
+    flex: flex,
+    inline-flex: inline-flex,
+    grid: grid,
+    inline-grid: inline-grid,
+    table: table,
+    table-cell: table-cell,
+    table-header-group: table-header-group,
+    table-footer-group: table-footer-group,
+    table-row-group: table-row-group,
+    table-row: table-row,
+    hidden: none
+);
+
+$flex-justify: (
+    justify-start: flex-start,
+    justify-end: flex-end,
+    justify-center: center,
+    justify-between: space-between,
+    justify-around: space-around,
+    justify-evenly: space-evenly,
+);
+
+$flex-align-items: (
+    items-start: flex-start,
+    items-end: flex-end,
+    items-center: center,
+    items-stretch: stretch,
+    items-baseline: baseline,
+);
+
+$flex-align-self: (
+    self-start: flex-start,
+    self-end: flex-end,
+    self-center: center,
+    self-stretch: stretch,
+    self-auto: auto
+);
+
+$flex-direction: (
+    flex-row: row,
+    flex-row-reverse: row-reverse,
+    flex-col: column,
+    flex-col-reverse: column-reverse,
+);
+
+$flex-wrap: (
+    flex-wrap: wrap,
+    flex-wrap-reverse: wrap-reverse,
+    flex-nowrap: nowrap
+);
+
+$flex-grow: (
+    0: 0,
+    1: 1,
+);
+
+
 $font-size: 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem;
 $font-weight: 400 500 700 900;
 
-// $m: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
-// $p: .6rem .9rem 1.2rem 1.5rem 1.8rem 2.1rem 2.4rem 2.7rem 3rem 3.6rem 3.9rem 4.2rem 4.5rem 4.8rem;
-$m: 6px 9px 12px 15px 18px 21px 24px 27px 30px 33px 36px 39px 42px 45px 48px;
-$p: 6px 9px 12px 15px 18px 21px 24px 27px 30px 33px 36px 39px 42px 45px 48px;
+$m: 3px 6px 9px 12px 15px 18px 21px 24px 27px 30px 33px 36px 39px 42px 45px 48px;
+$p: 3px 6px 9px 12px 15px 18px 21px 24px 27px 30px 33px 36px 39px 42px 45px 48px;
 
 
-// width
-$u-width: 300 320 360 420 480 600 768 960 1024 1200 1440;
+$spacing: 3;
+$spaceings: (
+    0: 0px,
+    1: 1px,
+    3: 3px,
+    6: 6px,
+    9: 9px,
+    12: 12px,
+    15: 15px,
+    18: 18px,
+    21: 21px,
+    24: 24px,
+    27: 27px,
+    30: 30px,
+    33: 33px,
+    36: 36px,
+    39: 39px,
+    42: 42px,
+    45: 45px,
+    60: 60px
+);
 
-$border-radius: 3px 6px 9px 12px;
+// width attr
+$width-attr: (
+    fill-available: fill-available,
+    max-content: max-content,
+    min-content: min-content,
+    fit-content: fit-content,
+);
+
+$width: (
+    auto: auto,
+    full: 100%,
+    half: 50%,
+    0: 0
+);
+
+// max-width
+$max-width: (
+    270: 270px,
+    300: 300px,
+    320: 320px,
+    360: 360px,
+    420: 420px,
+    480: 480px,
+    600: 600px,
+    768: 768px,
+    960: 960px,
+    1024: 1024px,
+    1200: 1200px,
+    1440: 1440px,
+    full: 100%,
+    90pct: 90%,
+    none: none,
+);
+
+
+$height: (
+    auto: auto,
+    full: 100%,
+    0: 0,
+);
+
+// border-width
+$border-width: (
+    0: 0px,
+    1: 1px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px
+);
+
+// border-radius
+$border-radius: (
+    none: 0px,
+    3: 3px,
+    5: 5px,
+    6: 6px,
+    9: 9px,
+    12: 12px,
+    20: 20px,
+    circle: 50%
+);
 $border-radius-circle: 50%;
 
-$color-black: #000;
+
+// typography
+$font-size: (
+    0: 0px,
+    14: 14px,
+    15: 15px,
+    16: 16px,
+    18: 18px,
+    20: 20px,
+    24: 24px,
+    27: 27px,
+    30: 30px,
+    40: 40px
+);
+
+$line-height: (
+    0: 0,
+    normal: 1,
+    base: 1.5
+);
+
+$font-weight: (
+    thin: 100,
+    normal: 400,
+    bold: 700
+);
+
+$text-align: (
+    left: left,
+    center: center,
+    right: right
+);
+
+$vertical-align: (
+    baseline: baseline,
+    top: top,
+    middle: middle,
+    bottom: bottom,
+    text-top: text-top,
+    text-bottom: text-bottom
+);
+
+//white-space
+$white-space: (
+    normal: normal,
+    nowrap: nowrap,
+    pre: pre,
+    pre-line: pre-line,
+    pre-wrap: pre-wrap,
+);
+
+$text-decoration: (
+    underline: underline,
+    line-through: line-through,
+    no-underline: none 
+);
+
+// cursor
+$cursor: (
+    auto: auto,
+    default: default,
+    pointer: pointer,
+    wait: wait,
+    text: text,
+    move: move,
+    not-arrowed: not-arrowed 
+);
+
+// table
+$table-layout: (
+    auto: auto,
+    fixed: fixed
+);
+
+$border-collapse: (
+    collapse: collapse,
+    separate: separate
+);
+
+// overflow
+$overflow: (
+    auto: auto,
+    visible: visible,
+    hidden: hidden,
+    scroll: scroll
+);
+
+// color
+$colors: (
+  transparent: transparent,
+  teal: #00a273,
+  link: #007aaa,
+  black: #333,
+  white: #fff,
+  orange: #f26600,
+  hot: #de2b2b
+);
+
+$color-teal: #00a273;
+$color-link: #007aaa;
+$color-orange: #f26600;
+$color-hot: #6b4d4d;
+$color-black: #333;
 $color-white: #fff;
 
 

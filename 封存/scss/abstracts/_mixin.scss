@@ -11,51 +11,6 @@
     @media  screen and (min-width: map-get($breakpoints, $breakpoint)){@content}
 };
 
-@mixin renderRwd($map,$className,$attrName) {
-  // if $className is list
-  @if type-of($className) == 'list' {
-    @each $BreakPointKey,$BreakPointValue in $breakpoints {
-      @include respond($BreakPointKey) {
-        @each $mapKey, $mapValue in $map {
-          @for $var from 0 through length($className) - 1 {
-            .#{$BreakPointKey}\:#{nth($className,$var)}-#{$mapKey} {
-              #{$attrName}: $mapValue;
-            }
-          }
-        }
-      }
-    }
-  } 
-
-  @if type-of($className) == 'map' {
-    @each $BreakPointKey,$BreakPointValue in $breakpoints {
-      @include respond($BreakPointKey) {
-        @each $mapKey, $mapValue in $map {
-          @each $classNameKey , $classNameValue in $className {
-            .#{$BreakPointKey}\:#{$classNameValue}-#{$mapKey} {
-              #{$attrName}: $mapValue;
-            }
-          }
-        }
-      }
-    }
-  } 
-
-  // if $className is string
-  @if type-of($className) == 'string' {
-    @each $BreakPointKey,$BreakPointValue in $breakpoints {
-      @include respond($BreakPointKey) {
-        @each $mapKey, $mapValue in $map {
-          .#{$BreakPointKey}\:#{$className}-#{$mapKey} {
-            #{$attrName}: $mapValue;
-          }
-        }
-      }
-    }
-  }
-};
-
-
 
 // clear both
 @mixin clear {
@@ -105,27 +60,27 @@
 }
 
 // btn
-// @mixin btn-base($shadow-border:true,$b-radius-level:0,$f-size-level:2,$p-tb:1.2rem,$p-rl:1.8rem) {
-//     &:link,
-//     &:visited {
-//         display: inline-block;
-//         text-decoration: none;
-//         color: #000;
-//         font-size: nth($font-size,$f-size-level);
-//         padding: $p-tb $p-rl;
-//         @if $shadow-border {box-shadow: 0 0 0 1px #000;}
-//         @if $b-radius-level > 0 {border-radius: nth($border-radius , $b-radius-level);}
-//     }
-// };
+@mixin btn-base($shadow-border:true,$b-radius-level:0,$f-size-level:2,$p-tb:1.2rem,$p-rl:1.8rem) {
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: #000;
+        font-size: nth($font-size,$f-size-level);
+        padding: $p-tb $p-rl;
+        @if $shadow-border {box-shadow: 0 0 0 1px #000;}
+        @if $b-radius-level > 0 {border-radius: nth($border-radius , $b-radius-level);}
+    }
+};
 
-// @mixin btn-base-button($shadow-border:true,$b-radius-level:0,$f-size-level:2,$p-tb:1.2rem,$p-rl:1.8rem) {
-//     border: none;
-//     background: #fff;
-//     font-size: nth($font-size,$f-size-level);
-//     padding: $p-tb $p-rl;
-//     @if $shadow-border {box-shadow: 0 0 0 1px #000;}
-//     @if $b-radius-level > 0 {border-radius: nth($border-radius , $b-radius-level);}
-// }
+@mixin btn-base-button($shadow-border:true,$b-radius-level:0,$f-size-level:2,$p-tb:1.2rem,$p-rl:1.8rem) {
+    border: none;
+    background: #fff;
+    font-size: nth($font-size,$f-size-level);
+    padding: $p-tb $p-rl;
+    @if $shadow-border {box-shadow: 0 0 0 1px #000;}
+    @if $b-radius-level > 0 {border-radius: nth($border-radius , $b-radius-level);}
+}
 
 @mixin btn-arrow($size:30px) {
     width: $size;
@@ -242,11 +197,11 @@
 }
 
 // font-size and line-height
-// @mixin  font($f-size-level:2,$lh:0,$f-weight-level:1) {
-//     font-size: nth($font-size , $f-size-level);
-//     font-weight: nth($font-weight,$f-weight-level);
-//     line-height: nth($font-size , $f-size-level) + $lh;
-// }
+@mixin  font($f-size-level:2,$lh:0,$f-weight-level:1) {
+    font-size: nth($font-size , $f-size-level);
+    font-weight: nth($font-weight,$f-weight-level);
+    line-height: nth($font-size , $f-size-level) + $lh;
+}
 
 // 置中方式
 @mixin align-inb-v {

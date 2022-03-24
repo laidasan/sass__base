@@ -1,0 +1,1 @@
+# VsCode snippet 設定 JSON 檔, 自己習慣用
