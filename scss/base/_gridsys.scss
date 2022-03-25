@@ -4,6 +4,7 @@
 
 // 寬度分離模式 => separete = true (deafult : false) 
 // 預設為 “不開啟” 寬度分離模式
+$separate: false;
 @if $separate {
     // @debug $separate;
 
